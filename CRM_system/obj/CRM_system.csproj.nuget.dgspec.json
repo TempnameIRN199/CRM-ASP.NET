@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Coding\\Learn\\ASP.NET\\anyway ASP.NET\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj": {}
+    "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj": {}
   },
   "projects": {
-    "E:\\Coding\\Learn\\ASP.NET\\anyway ASP.NET\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj": {
+    "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Coding\\Learn\\ASP.NET\\anyway ASP.NET\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj",
+        "projectUniqueName": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj",
         "projectName": "CRM_system",
-        "projectPath": "E:\\Coding\\Learn\\ASP.NET\\anyway ASP.NET\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj",
-        "packagesPath": "C:\\Users\\vitya\\.nuget\\packages\\",
-        "outputPath": "E:\\Coding\\Learn\\ASP.NET\\anyway ASP.NET\\CRM-ASP.NET\\CRM_system\\obj\\",
+        "projectPath": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj",
+        "packagesPath": "C:\\Users\\Семён\\.nuget\\packages\\",
+        "outputPath": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\vitya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "D:\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

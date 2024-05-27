@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+<style type="text/css">
+#block{
+    border: 5px black solid;
+    border-radius: 10px;
+    width: 26%;
+    margin-top: 2%;
+    padding: 3%;
+    padding-bottom: 0%;
+    padding-top: 2%;
+    
+    text-align: center;
+    display: inline-block;
+    vertical-align:top;
+    font-family: system-ui;
+}
+#forfirstblock{
+    border: 5px black solid;
+    border-radius: 10px;
+    width: 26%;
+    margin-left: 12%;
+    margin-right: 10%;
+    margin-top: 2%;
+    padding: 3%;
+    padding-top: 2%;
+    text-align: center;
+    display: inline-block;
+    font-family: system-ui;
+    padding-bottom: 1%;
+}
+body{
+    background-color: #D2D2D2;
+    transition: background-color 0.3s ease; 
+    font-family: system-ui;
+  
+}
+h3{
+    font-weight: 100;
+    color: rgb(92, 92, 92);
+    font-family: system-ui;
+}
+h2{
+    font-size: 19px;
+    font-family: system-ui;
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+}
+h1{
+    font-size: 50px;
+    font-family: system-ui;
+}
+.blockWithText{
+    font-family: system-ui;
+    text-align: left;
+}
+input{
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 8px;
+    border: none;
+}
+#buttonSubmit{
+    width: 80%;
+    background-color: rgb(41, 41, 41);
+    color: whitesmoke;
+    border: 0px  rgb(41, 41, 41) solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: system-ui;
+    font-size: 20px;
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+}
+.buttonTheme{
+    background-color: rgb(41, 41, 41);
+    color: whitesmoke;
+    border: 0px  rgb(41, 41, 41) solid;
+    border-radius: 10px;
+    position: absolute;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+    font-family: system-ui;
+
+}
+</style>
+<script>
+    var a=0;
+    function ChangeTheme(){
+        var buttonTheme = document.getElementById('buttonTheme');
+        var buttonSubmit = document.getElementById('buttonSubmit');
+        var divblock = document.getElementById('block');
+        var forfirstblock = document.getElementById('forfirstblock');
+        var body = document.getElementById('body');
+        var h2Elements = document.querySelectorAll('h2');
+        var h1Elements = document.querySelectorAll('h1');
+        if (a == 0) {
+            buttonTheme.textContent = "☀";
+            buttonTheme.style.backgroundColor = "whitesmoke";
+            buttonTheme.style.borderColor = "whitesmoke";
+            buttonTheme.style.color = "rgb(41, 41, 41)";
+            buttonSubmit.style.backgroundColor="whitesmoke";
+            buttonSubmit.style.borderColor="whitesmoke";
+            buttonSubmit.style.color = "rgb(41, 41, 41)";
+            forfirstblock.style.borderColor="whitesmoke";
+            body.style.backgroundColor = "rgb(41, 41, 41)";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "whitesmoke";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "whitesmoke";
+            });
+            block.style.borderColor="whitesmoke";
+            a = 1;
+        } 
+        else {
+            buttonTheme.textContent = "☾";
+            buttonTheme.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonTheme.style.borderColor = "rgb(41, 41, 41)";
+            buttonTheme.style.color = "whitesmoke";
+            buttonSubmit.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonSubmit.style.borderColor = "rgb(41, 41, 41)";
+            forfirstblock.style.borderColor="rgb(41, 41, 41)";
+            buttonSubmit.style.color = "whitesmoke";
+            body.style.backgroundColor = "#D2D2D2";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "rgb(41, 41, 41)";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "rgb(41, 41, 41)";
+            });
+            block.style.borderColor="rgb(41, 41, 41)";
+
+            a = 0;
+        }
+    }
+</script>  
+</head>
+<body id="body">
+<div  id="forfirstblock">
+    <form>
+        <h1>Registration</h1>
+        <h3>Sign in for CRM</h3>
+        <div class="blockWithText">
+            <h2>Email</h2>
+            <input type="email" placeholder="email@gmail.com">
+        </div>
+        <div class="blockWithText">
+            <h2>Telephone</h2>
+            <input type="password"  placeholder="0977777777">
+        </div>
+        <div class="blockWithText">
+            <h2>Login</h2>
+            <input type="password"  placeholder="IAmLogin">
+        </div>
+        <div class="blockWithText">
+            <h2>Password</h2>
+            <input type="password"  placeholder="********">
+        </div>
+        <br>
+        <button id="buttonSubmit">Log In</button>
+    <br>
+</div>
+<div id="block">
+        <h1>Registration</h1>
+        <h3>Sign in for CRM</h3>
+        <div class="blockWithText">
+            <h2>Name</h2>
+            <input type="text" placeholder="MyfirstCompany">
+        </div>
+        <div class="blockWithText">
+            <h2>Establishment date</h2>
+            <input type="date"  placeholder="20.08.2006">
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+
+</form>
+<button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
+</body>
+</html>

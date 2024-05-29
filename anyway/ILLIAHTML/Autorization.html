@@ -4,79 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Autorization</title>
-<style type="text/css">
-#block{
-    border: 5px black solid;
-    border-radius: 10px;
-    width: 26%;
-    margin-left: 35%;
-    margin-top: 5%;
-    padding: 3%;
-    text-align: center;
-}
-a {
-    font-family: system-ui;  
-    color: rgb(57, 140, 179);
-    font-size: 18px;
-}
-body{
-    font-family: system-ui;
-    background-color: #D2D2D2;
-    transition: background-color 0.3s ease;   
-}
-h3{
-    font-weight: 100;
-    color: rgb(92, 92, 92);
-    font-family: system-ui;
-}
-h2{
-    font-size: 19px;
-    font-family: system-ui;
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-}
-h1{
-    font-size: 50px;
-    font-family: system-ui;
-}
-.blockWithText{
-    text-align: left;
-}
-input{
-    border-radius: 5px;
-    width: 100%;
-    padding: 10px;
-    padding-left: 8px;
-    border: none;
-}
-#buttonSubmit{
-    width: 80%;
-    background-color: rgb(41, 41, 41);
-    color: whitesmoke;
-    border: 0px  rgb(41, 41, 41) solid;
-    border-radius: 5px;
-    padding: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: system-ui;
-    font-size: 15px;
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.buttonTheme{
-    background-color: rgb(41, 41, 41);
-    color: whitesmoke;
-    border: 0px  rgb(41, 41, 41) solid;
-    border-radius: 10px;
-    position: absolute;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 40px;
-    width: 70px;
-    height: 70px;
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-
-}
-</style>
+<link rel="stylesheet" href="style.css">
 <script>
     var a=0;
     function ChangeTheme(){
@@ -127,10 +55,10 @@ input{
     }
 </script>  
 </head>
-<body id="body">
+<body id="body" style="background-color: #D2D2D2;">
 <div id="block">
     <form>
-        <h1>Autorization</h1>
+        <h1 style="font-size: 50px;">Autorization</h1>
         <h3>Log in for CRM</h3>
         <div class="blockWithText">
             <h2>Email</h2>

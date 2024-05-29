@@ -1,12 +1,25 @@
 ﻿using System;
-using System.Data.Entity;
+using CRM_system.Models.EntityDataModels.CrmSysModel.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.SqlServer;
 
 namespace CRM_system.Models.EntityDataModels.CrmSysModel
 {
-    using Entities;
-
     public partial class CrmSysContext : DbContext
     {
+        public CrmSysContext()
+        {
+        }
+
+        public CrmSysContext(DbContextOptions<CrmSysContext> options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //}
+
         public DbSet<Director> Directors { set; get; }
         public DbSet<Manager> Managers { set; get; }
         public DbSet<Client> Clients { set; get; }
@@ -17,9 +30,5 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
         public DbSet<ManagerAcctLogPwd> ManagersAcctsLogsPwds { set; get; }
         public DbSet<DirectorAcctLogPwd> DirectorsAcctsLogsPwds { set; get; }
 
-        public CrmSysContext()
-        {
-
-        }
     }
 }

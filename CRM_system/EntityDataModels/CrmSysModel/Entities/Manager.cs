@@ -33,7 +33,6 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [Required]
         public short CompanyId { set; get; }
 
-        [Required]
         public int ManagerAcctLogPwdId { set; get; }
 
         [ForeignKey(nameof(CompanyId))]
@@ -41,6 +40,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
 
         [ForeignKey(nameof(ManagerAcctLogPwdId))]
         public virtual ManagerAcctLogPwd ManagerAcctLogPwd { set; get; }
+
+        public Manager()
+        { }
 
         public Manager(in string inSurname, in string inName, in string inPhone, in string inEmail,
             in short inCompanyId, in int inManagerAcctLogPwdId) : this(0, inSurname, inName, inPhone, inEmail, inCompanyId, inManagerAcctLogPwdId)

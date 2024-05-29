@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Managers</title>
-<link rel="stylesheet" href="style.css">
+<title>Deals</title>
+<link rel="stylesheet" href="style.css"> 
 <script>
     var a=0;
     document.addEventListener('DOMContentLoaded', function () {
@@ -41,6 +41,7 @@
         var customButtons = document.querySelectorAll('.custom-button');
         var modalContent = document.querySelector('.modal-content');
         var closeButton = document.querySelector('.close');
+        var buttonInTable = document.querySelectorAll('.buttonInTable');
         var buttonInTable1 = document.querySelectorAll('.buttonInTable1');
         var buttonSubmit = document.getElementById('buttonSubmit');
         if (a == 0) {
@@ -64,6 +65,9 @@
             customButtons.forEach(function(a) {
                 a.style.color = "whitesmoke";
             });
+            buttonInTable.forEach(function(button) {
+                button.style.color = "whitesmoke";
+            });
             buttonInTable1.forEach(function(button) {
                 button.style.color = "whitesmoke";
             });
@@ -71,7 +75,9 @@
             closeButton.style.color = "whitesmoke";
             buttonSubmit.style.backgroundColor="whitesmoke";
             buttonSubmit.style.borderColor="whitesmoke";
-            buttonSubmit.style.color = "rgb(41, 41, 41)";
+            buttonSubmit.style.color = "rgb(41, 41, 41)"; 
+            plusbutton.style.borderColor = "whitesmoke";
+            plusbutton.style.color = "whitesmoke";
             a = 1;
         } 
         else {
@@ -81,6 +87,8 @@
             buttonTheme.style.color = "whitesmoke";
             content.style.backgroundColor = "#d3d3d3";
             header.style.backgroundColor = "rgb(179, 179, 179)";
+            plusbutton.style.borderColor = "rgb(41, 41, 41)";
+            plusbutton.style.color = "rgb(41, 41, 41)";
             body.style.color = "rgb(41, 41, 41)";
             sidebar.style.backgroundColor = "rgb(157, 157, 157)";
             h2Elements.forEach(function(h2) {
@@ -94,6 +102,9 @@
             });
             customButtons.forEach(function(a) {
                 a.style.color = "rgb(41, 41, 41)";
+            });
+            buttonInTable.forEach(function(button) {
+                button.style.color = "rgb(41, 41, 41)";
             });
             buttonInTable1.forEach(function(button) {
                 button.style.color = "rgb(41, 41, 41)";
@@ -110,7 +121,7 @@
         input.setAttribute('value', input.value);
     }
     
-</script>  
+</script>   
 </head>
 <body id="body1">
     <div id="header" class="header">
@@ -134,8 +145,11 @@
         </div>
         <div id="content" class="content">
             <div class="table-header">
-                <h2>Managers</h2>
-                <button class="new-manager-btn" style="border: none; cursor: pointer; background-color: transparent; height: 50px; width: 50px; margin-left: 90%;"><img src="https://cdn-icons-png.flaticon.com/512/346/346569.png" alt="Button Icon"></button><br>
+                <h1 class="h1class">
+                    Active Deals
+                </h1> 
+                &nbsp;&nbsp;&nbsp;
+                <button class="new-manager-btn" id="plusbutton" >+</button>
             </div>
             <div class="table-container">
                 <table>
@@ -146,9 +160,11 @@
                             <th>Patronymic</th>
                             <th>Phone</th>
                             <th>Email</th>
-                            <th>Login</th>
-                            <th>Password</th>
-                            <th>Dismiss</th>
+                            <th>Budget</th>
+                            <th>Description</th>
+                            <th>More info</th>
+                            <th>Accept</th>
+                            <th>Reject</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,8 +174,11 @@
                             <td>Oleksandrovich</td>
                             <td>+380 67 293 98 85</td>
                             <td>example@gmail.com</td>
-                            <td>versil</td>
-                            <td>qwerty123</td>
+                            <td>10000$</td>
+                            <!-- тут крч $ добавлять после считывания с таблицы -->
+                            <td>авт.дтл.дыфптлждыфваоваоыватлждатлд птлждодаод</td>
+                            <td><button class="buttonInTable">More</button></td>
+                            <td><button class="buttonInTable1">✔</button></td>
                             <td><button class="buttonInTable1">&#x2718;</button></td>
                         </tr>
                     </tbody>
@@ -173,7 +192,7 @@
 <div id="manager-modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2 class="modal-title">New Manager</h2>
+        <h2 class="modal-title">New Deal</h2>
         <form id="manager-modal-form">
             <label for="surname">Surname:</label>
             <input type="text" id="surname" name="surname" oninput="updateValue(this)" placeholder="Surname" required><br>
@@ -185,11 +204,11 @@
             <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" oninput="updateValue(this)" placeholder="+380 67 777 77 77" required>
             <label for="email">Email:</label>
             <input type="text" id="email" name="email" oninput="updateValue(this)" placeholder="email@gmail.com" required><br>
-            <label for="login">Login:</label>
-            <input type="text" id="login" name="login" oninput="updateValue(this)" placeholder="Login" required><br>
-            <label for="password">Password:</label>
-            <input type="text" id="password" name="password" oninput="updateValue(this)" placeholder="********" required><br>
-            <button type="submit" id="buttonSubmit">Add Manager</button>
+            <label for="login">Budget:</label>
+            <input type="number" id="login" name="login" oninput="updateValue(this)" placeholder="111" required><br>
+            <label for="password">Description:</label>
+            <input type="text" id="password" name="password" oninput="updateValue(this)" placeholder="blue car" required><br>
+            <button type="submit" id="buttonSubmit">Add Deal</button>
         </form>
     </div>
 </div>

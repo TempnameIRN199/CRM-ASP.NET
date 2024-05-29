@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Autorization</title>
+<title>Registration</title>
 <link rel="stylesheet" href="style.css">
 <script>
     var a=0;
     function ChangeTheme(){
         var buttonTheme = document.getElementById('buttonTheme');
         var buttonSubmit = document.getElementById('buttonSubmit');
-        var divblock = document.getElementById('block');
+        var divblock = document.getElementById('block1');
+        var forfirstblock = document.getElementById('forfirstblock');
         var body = document.getElementById('body');
         var h2Elements = document.querySelectorAll('h2');
         var h1Elements = document.querySelectorAll('h1');
@@ -22,7 +23,7 @@
             buttonSubmit.style.backgroundColor="whitesmoke";
             buttonSubmit.style.borderColor="whitesmoke";
             buttonSubmit.style.color = "rgb(41, 41, 41)";
-
+            forfirstblock.style.borderColor="whitesmoke";
             body.style.backgroundColor = "rgb(41, 41, 41)";
             h2Elements.forEach(function(h2) {
                 h2.style.color = "whitesmoke";
@@ -40,6 +41,7 @@
             buttonTheme.style.color = "whitesmoke";
             buttonSubmit.style.backgroundColor = "rgb(41, 41, 41)";
             buttonSubmit.style.borderColor = "rgb(41, 41, 41)";
+            forfirstblock.style.borderColor="rgb(41, 41, 41)";
             buttonSubmit.style.color = "whitesmoke";
             body.style.backgroundColor = "#D2D2D2";
             h2Elements.forEach(function(h2) {
@@ -55,14 +57,22 @@
     }
 </script>  
 </head>
-<body id="body" style="background-color: #D2D2D2;">
-<div id="block">
+<body>
+<div  id="forfirstblock">
     <form>
-        <h1 style="font-size: 50px;">Autorization</h1>
-        <h3>Log in for CRM</h3>
+        <h1>Registration</h1>
+        <h3>Sign in for CRM</h3>
         <div class="blockWithText">
             <h2>Email</h2>
             <input type="email" placeholder="email@gmail.com">
+        </div>
+        <div class="blockWithText">
+            <h2>Telephone</h2>
+            <input type="password"  placeholder="0977777777">
+        </div>
+        <div class="blockWithText">
+            <h2>Login</h2>
+            <input type="password"  placeholder="IAmLogin">
         </div>
         <div class="blockWithText">
             <h2>Password</h2>
@@ -70,10 +80,27 @@
         </div>
         <br>
         <button id="buttonSubmit">Log In</button>
-    </form>
     <br>
-    <a href="Registration.html">Registration</a>
 </div>
+<div id="block1">
+        <h1>Registration</h1>
+        <h3>Sign in for CRM</h3>
+        <div class="blockWithText">
+            <h2>Name</h2>
+            <input type="text" placeholder="MyfirstCompany">
+        </div>
+        <div class="blockWithText">
+            <h2>Establishment date</h2>
+            <input type="date"  placeholder="20.08.2006">
+        </div>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+
+</form>
 <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
 </body>
 </html>

@@ -3,141 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MainPage</title>
-<style type="text/css">
-body{
-    margin: 0;
-    font-family: system-ui;
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    color: rgb(41, 41, 41);
-    transition: background-color 0.3s ease;   
-}
-h1, h2{
-    font-size: 25px;
-    font-family: system-ui;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.header {
-    background-color: rgb(179, 179, 179);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;  
-    padding-left: 30px; 
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;     
-}
-.sidebar {
-    background-color: rgb(157, 157, 157);
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.sidebar a {
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    color: rgb(41, 41, 41);
-    font-weight: bolder;
-    border-bottom: 1px solid #666;
-    font-size: 25px;
-    font-family: system-ui;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.sidebar a:hover {
-    background-color: #666;
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.content {
-    flex: 1;
-    background-color: #d3d3d3;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.rectangle {
-    padding: 15px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    transition: background-color 0.3s ease;
-}
-.rectangle .custom-title {
-    margin: 0 0 10px 0;
-    font-size: 20px;
-    font-weight: bold;
-}
-.rectangle p {
-    margin: 0;
-    font-size: 16px;
-}
-#rectangle1 { background-color: rgb(184, 86, 57); }
-#rectangle2 { background-color: rgb(58, 165, 207); }
-#rectangle3 { background-color: rgb(123, 206, 59); margin-top: -250px; }
-#rectangle4 { background-color: rgb(184, 61, 157); margin-top: -250px; }
-.main {
-    display: flex;
-    flex: 1;
-}
-.user-info {
-    display: flex;
-    align-items: center;
-}
-.user-info img {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-}
-.user-name {
-    font-size: 22px;
-    font-weight: bolder;
-    font-family: system-ui;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.buttonTheme{
-    background-color: rgb(41, 41, 41);
-    color: whitesmoke;
-    border: 0px  rgb(41, 41, 41) solid;
-    border-radius: 10px;
-    position: absolute;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 40px;
-    width: 70px;
-    height: 70px;
-    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
-}
-.custom-button {
-    color: rgb(41, 41, 41);
-    font-size: 22px;
-    font-weight: bolder;
-    font-family: system-ui;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background: none;
-    margin-left: 10px;
-    border: none;
-    transition: color 0.3s ease, border-bottom-color 0.3s ease;
-}
-</style> 
+<title>Statistics</title>
+<link rel="stylesheet" href="style.css">
 <script>
     var a=0;
     function ChangeTheme(){
         var buttonTheme = document.getElementById('buttonTheme');
         var content = document.getElementById('content');
         var header = document.getElementById('header');
-        var body = document.getElementById('body');
+        var body = document.getElementById('body1');
         var sidebar = document.getElementById('sidebar');
         var h2Elements = document.querySelectorAll('h2');
         var h1Elements = document.querySelectorAll('h1');
@@ -192,7 +66,7 @@ h1, h2{
     }
 </script>   
 </head>
-<body id="body">
+<body id="body1">
     <div id="header" class="header">
         <h1>CRM System</h1>
         <div class="user-info">
@@ -212,7 +86,7 @@ h1, h2{
             <a href="#">Sixth</a>
             <a href="#">Seventh</a>
         </div>
-        <div id="content" class="content">
+        <div id="content" class="content1">
             <div id="rectangle1" class="rectangle">
                 <p class="custom-title">Statistics 1</p>
                 <p>This is the first statistics.</p>

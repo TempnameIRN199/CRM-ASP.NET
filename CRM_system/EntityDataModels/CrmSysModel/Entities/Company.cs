@@ -19,13 +19,15 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [Required]
         public DateTime DateOfEstab { set; get; }
 
-        [Required]
         public short DirectorId { set; get; }
 
         [ForeignKey(nameof(DirectorId))]
         public virtual Director Director { set; get; }
 
         public virtual ICollection<Manager> Managers { set; get; }
+
+        public Company()
+        { }
 
         public Company(in string inName, in DateTime inDateOfEstab, in short inDirectorId) :
             this(0, inName, inDateOfEstab, inDirectorId)

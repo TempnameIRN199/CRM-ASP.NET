@@ -31,13 +31,15 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [EmailAddress]
         public string Email { set; get; }
 
-        [Required]
         public long DealId { set; get; }
 
         [ForeignKey(nameof(DealId))]
         public virtual Deal Deal { set; get; }
 
         public virtual ICollection<ClientNotation> ClientNotations { set; get; }
+
+        public Client()
+        { }
 
         public Client(in string inSurname, in string inName, in string inPatronymic, in string inPhone,
             in string inEmail, in long inDealId) : this(0L, inSurname, inName, inPatronymic, inPhone, inEmail, inDealId)

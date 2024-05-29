@@ -24,6 +24,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [ForeignKey(nameof(DealId))]
         public virtual Deal Deal { set; get; }
 
+        public DealEvent()
+        { }
+
         public DealEvent(in string inDescription, in DateTime inDate, in long inDealId) : this(0L, inDescription, inDate, inDealId)
         { }
 

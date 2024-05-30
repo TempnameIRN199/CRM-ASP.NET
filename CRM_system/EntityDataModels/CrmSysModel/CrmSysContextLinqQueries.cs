@@ -14,37 +14,41 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
         {
             public static class AddEntityQueries
             {
-                public static void AddDirector(in CrmSysContext inCrmSysContext, in Director inDirector)
+                public static void AddClientAndDeal(in CrmSysContext inCrmSysContext, in Client inClient, in Deal inDeal)
                 {
-                    inCrmSysContext.Directors.Add(inDirector);
+                    AddClient(inCrmSysContext, inClient);
+                    AddDeal(inCrmSysContext, inDeal);
+
+                    inClient.DealId = inDeal.Id;
+                    inDeal.ClientId = inClient.Id;
 
                     inCrmSysContext.SaveChanges();
                 }
 
-                public static void AddManager(in CrmSysContext inCrmSysContext, in Manager inManager)
+                public static void AddManagerAcct(in CrmSysContext inCrmSysContext, in Manager inManager,
+                    in ManagerAcctLogPwd inManagerAcctLogPwd)
                 {
-                    inCrmSysContext.Managers.Add(inManager);
+                    AddManager(inCrmSysContext, inManager);
+                    AddManagerAcctLogPwd(inCrmSysContext, inManagerAcctLogPwd);
+
+                    inManager.ManagerAcctLogPwdId = inManagerAcctLogPwd.Id;
+                    inManagerAcctLogPwd.ManagerId = inManager.Id;
 
                     inCrmSysContext.SaveChanges();
                 }
 
-                public static void AddClient(in CrmSysContext inCrmSysContext, in Client inClient)
+                public static void AddCompanyDirectorAcct(in CrmSysContext inCrmSysContext, in Company inCompany,
+                    in Director inDirector, in DirectorAcctLogPwd inDirectorAcctLogPwd)
                 {
-                    inCrmSysContext.Clients.Add(inClient);
+                    AddCompany(inCrmSysContext, inCompany);
+                    AddDirector(inCrmSysContext, inDirector);
+                    AddDirectorAcctLogPwd(inCrmSysContext, inDirectorAcctLogPwd);
 
-                    inCrmSysContext.SaveChanges();
-                }
+                    inCompany.DirectorId = inDirector.Id;
+                    inDirector.CompanyId = inCompany.Id;
 
-                public static void AddCompany(in CrmSysContext inCrmSysContext, in Company inCompany)
-                {
-                    inCrmSysContext.Companies.Add(inCompany);
-
-                    inCrmSysContext.SaveChanges();
-                }
-
-                public static void AddDeal(in CrmSysContext inCrmSysContext, in Deal inDeal)
-                {
-                    inCrmSysContext.Deals.Add(inDeal);
+                    inDirectorAcctLogPwd.DirectorId = inDirector.Id;
+                    inDirector.DirectorAcctLogPwdId = inDirectorAcctLogPwd.Id;
 
                     inCrmSysContext.SaveChanges();
                 }
@@ -63,14 +67,49 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
                     inCrmSysContext.SaveChanges();
                 }
 
-                public static void AddDirectorAcctLogPwd(in CrmSysContext inCrmSysContext, in DirectorAcctLogPwd inDirectorAcctLogPwd)
+                private static void AddDirector(in CrmSysContext inCrmSysContext, in Director inDirector)
+                {
+                    inCrmSysContext.Directors.Add(inDirector);
+
+                    inCrmSysContext.SaveChanges();
+                }
+
+                private static void AddManager(in CrmSysContext inCrmSysContext, in Manager inManager)
+                {
+                    inCrmSysContext.Managers.Add(inManager);
+
+                    inCrmSysContext.SaveChanges();
+                }
+
+                private static void AddClient(in CrmSysContext inCrmSysContext, in Client inClient)
+                {
+                    inCrmSysContext.Clients.Add(inClient);
+
+                    inCrmSysContext.SaveChanges();
+                }
+
+                private static void AddCompany(in CrmSysContext inCrmSysContext, in Company inCompany)
+                {
+                    inCrmSysContext.Companies.Add(inCompany);
+
+                    inCrmSysContext.SaveChanges();
+                }
+
+                private static void AddDeal(in CrmSysContext inCrmSysContext, in Deal inDeal)
+                {
+                    inCrmSysContext.Deals.Add(inDeal);
+
+                    inCrmSysContext.SaveChanges();
+                }
+
+                private static void AddDirectorAcctLogPwd(in CrmSysContext inCrmSysContext, in DirectorAcctLogPwd inDirectorAcctLogPwd)
                 {
                     inCrmSysContext.DirectorsAcctsLogsPwds.Add(inDirectorAcctLogPwd);
 
                     inCrmSysContext.SaveChanges();
                 }
 
-                public static void AddManagerAcctLogPwd(in CrmSysContext inCrmSysContext, in ManagerAcctLogPwd inManagerAcctLogPwd)
+                private static void AddManagerAcctLogPwd(in CrmSysContext inCrmSysContext, in ManagerAcctLogPwd inManagerAcctLogPwd)
                 {
                     inCrmSysContext.ManagersAcctsLogsPwds.Add(inManagerAcctLogPwd);
 
@@ -80,51 +119,13 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
 
             public static class AlterEntityQueries
             {
-                public static void AlterDirector(in CrmSysContext inCrmSysContext, in Director inDirector)
-                {
-
-                }
-
-                public static void AlterManager(in CrmSysContext inCrmSysContext, in Manager inManager)
-                {
-
-                }
-
-                public static void AlterClient(in CrmSysContext inCrmSysContext, in Client inClient)
-                {
-
-                }
-
-                public static void AlterCompany(in CrmSysContext inCrmSysContext, in Company inCompany)
-                {
-
-                }
-
                 public static void AlterDeal(in CrmSysContext inCrmSysContext, in Deal inDeal)
                 {
+                    inCrmSysContext.Deals.Attach(inDeal);
+                    inCrmSysContext.Entry(inDeal).State = EntityState.Modified;
 
+                    inCrmSysContext.SaveChanges();
                 }
-
-                public static void AlterDealEvent(in CrmSysContext inCrmSysContext, in DealEvent inDealEvent)
-                {
-
-                }
-
-                public static void AlterClientNotation(in CrmSysContext inCrmSysContext, in ClientNotation inClientNotation)
-                {
-
-                }
-
-                public static void AlterDirectorAcctLogPwd(in CrmSysContext inCrmSysContext, in DirectorAcctLogPwd inDirectorAcctLogPwd)
-                {
-
-                }
-
-                public static void AlterManagerAcctLogPwd(in CrmSysContext inCrmSysContext, in ManagerAcctLogPwd inManagerAcctLogPwd)
-                {
-
-                }
-
             }
 
             public static class DeleteEntityQueries
@@ -169,7 +170,18 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
             {
                 public static CompanyStats GetCompanyStatsInCurrMonth(in CrmSysContext inCrmSysContext, short inCompanyId)
                 {
-                    return null;
+                    ICollection<ManagerStats> tmpCollOfManagerStats = new List<ManagerStats>();
+                    CompanyStats tmpCompanyStats = new CompanyStats();
+
+                    foreach (var tmpManager in inCrmSysContext.Managers.Where((inManager) => inManager.CompanyId == inCompanyId))
+                        tmpCollOfManagerStats.Add(GetManagerStatsInCurrMonth(inCrmSysContext, tmpManager.Id));
+
+                    tmpCompanyStats.FailedDeals = (short)tmpCollOfManagerStats.Sum((inManagerStats) => inManagerStats.FailedDeals);
+                    tmpCompanyStats.SuccessfulDeals = (short)tmpCollOfManagerStats.Sum((inManagerStats) => inManagerStats.SuccessfulDeals);
+                    tmpCompanyStats.ActiveDeals = (short)tmpCollOfManagerStats.Sum((inManagerStats) => inManagerStats.ActiveDeals);
+                    tmpCompanyStats.Income = (short)tmpCollOfManagerStats.Sum((inManagerStats) => inManagerStats.Income);
+
+                    return tmpCompanyStats;
                 }
 
                 public static ManagerStats GetManagerStatsInCurrMonth(in CrmSysContext inCrmSysContext, int inManagerId)
@@ -199,14 +211,14 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
                         inDeal.DealStatusId == 2).Sum((inDeal) => inDeal.Amount)
                     };
 
-
                     return tmpManagerStats;
                 }
 
-                public static ICollection<DealEvent> GetManagerDealsEventsForToday(in CrmSysContext inCrmSysContext, int inManagerId)
-                {
-                    return null;
-                }
+                public static ICollection<DealEvent> GetManagerDealsEventsForToday(in CrmSysContext inCrmSysContext, int inManagerId) =>
+                    inCrmSysContext.Deals.Join(inCrmSysContext.DealsEvents, inDeal => inDeal.Id, inDealEvent => inDealEvent.DealId,
+                        (inDeal, inDealEvent) => new { Deal = inDeal, DealEvent = inDealEvent}).
+                    Where((inFirstResult) => inFirstResult.Deal.ManagerId == inManagerId).
+                    Select((inSecondResult) => inSecondResult.DealEvent).ToList();
             }
         }
     }

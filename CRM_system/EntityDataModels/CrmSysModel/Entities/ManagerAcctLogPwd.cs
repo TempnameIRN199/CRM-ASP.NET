@@ -19,11 +19,13 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [StringLength(50, MinimumLength = 1)]
         public string Password { set; get; }
 
-        [Required]
         public int ManagerId { set; get; }
 
         [ForeignKey(nameof(ManagerId))]
         public virtual Manager Manager { set; get; }
+
+        public ManagerAcctLogPwd()
+        { }
 
         public ManagerAcctLogPwd(in string inLogin, in string inPassword, in int inManagerId) : this(0, inLogin, inPassword, inManagerId)
         { }

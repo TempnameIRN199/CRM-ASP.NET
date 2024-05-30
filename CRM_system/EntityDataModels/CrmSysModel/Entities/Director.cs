@@ -30,10 +30,8 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [EmailAddress]
         public string Email { set; get; }
 
-        [Required]
         public short CompanyId { set; get; }
 
-        [Required]
         public short DirectorAcctLogPwdId { set; get; }
 
         [ForeignKey(nameof(CompanyId))]
@@ -41,6 +39,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
 
         [ForeignKey(nameof(DirectorAcctLogPwdId))]
         public virtual DirectorAcctLogPwd DirectorAcctLogPwd { set; get; }
+
+        public Director()
+        { }
 
         public Director(in string inSurname, in string inName, in string inPhone, in string inEmail,
             in short inCompanyId, in short inDirectorAcctLogPwdId) : this(0, inSurname, inName, inPhone, inEmail, inCompanyId, inDirectorAcctLogPwdId)

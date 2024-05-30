@@ -18,6 +18,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
 
         public virtual ICollection<Deal> Deals { set; get; }
 
+        public DealStatus()
+        { }
+
         public DealStatus(in string inName) : this(0, inName)
         { }
 

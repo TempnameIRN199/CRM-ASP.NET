@@ -24,6 +24,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [ForeignKey(nameof(ClientId))]
         public virtual Client Client { set; get; }
 
+        public ClientNotation()
+        { }
+
         public ClientNotation(in string inText, in DateTime inDate, in long inClientId) : this(0L, inText, inDate, inClientId)
         { }
 

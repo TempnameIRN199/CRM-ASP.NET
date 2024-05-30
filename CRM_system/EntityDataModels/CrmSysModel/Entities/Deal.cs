@@ -22,7 +22,6 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [Required]
         public double Amount { set; get; }
 
-        [Required]
         public long ClientId { set; get; }
 
         [Required]
@@ -41,6 +40,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         public virtual DealStatus DealStatus { set; get; }
 
         public virtual ICollection<DealEvent> DealEvents { set; get; }
+
+        public Deal()
+        { }
 
         public Deal(in string inDescription, in DateTime inDate, in double inAmount, in long inClientId,
             in int inManagerId, in byte inDealStatusId) : this(0L, inDescription, inDate, inAmount, inClientId, inManagerId, inDealStatusId)

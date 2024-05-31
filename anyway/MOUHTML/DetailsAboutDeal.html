@@ -21,6 +21,7 @@
         var buttonTheme = document.getElementById('buttonTheme');
         var content = document.getElementById('content3');
         var content1 = document.getElementById('content2');
+        var buttonAdd = document.getElementById('button-add');
         var header = document.getElementById('header');
         var body = document.getElementById('body1');
         var sidebar = document.getElementById('sidebar');
@@ -35,6 +36,8 @@
             buttonTheme.style.color = "rgb(41, 41, 41)";
             content.style.backgroundColor = "rgb(53, 53, 53)";
             content1.style.backgroundColor = "rgb(70, 70, 70)";
+            buttonAdd.style.background= "whitesmoke";
+            buttonAdd.style.color = "rgb(41, 41, 41)";
             header.style.backgroundColor = "rgb(45, 45, 45)";
             body.style.color = "whitesmoke";
             sidebar.style.backgroundColor = "rgb(40, 40, 40)";
@@ -59,6 +62,8 @@
             buttonTheme.style.color = "whitesmoke";
             content.style.backgroundColor = " #c4c4c4";
             content1.style.backgroundColor = " #d3d3d3";
+            buttonAdd.style.background= "rgb(41, 41, 41)";
+            buttonAdd.style.color = "whitesmoke";
             header.style.backgroundColor = "rgb(179, 179, 179)";
             body.style.color = "rgb(41, 41, 41)";
             sidebar.style.backgroundColor = "rgb(157, 157, 157)";
@@ -173,7 +178,7 @@
             </select>
             <input class="input-style" type="text">
             <input id="date-input" class="input-style1" type="date" style="visibility: hidden;"> 
-            <button class="button-add">Add</button>
+            <button id="button-add" class="button-add">Add</button>
         </div>
     </div>
     <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>

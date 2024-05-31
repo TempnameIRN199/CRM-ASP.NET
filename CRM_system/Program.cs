@@ -6,11 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
-
 string connection = builder.Configuration.GetConnectionString("master");
 
 builder.Services.AddDbContext<CrmSysContext>(options => options.UseSqlServer(connection));
+
+
+var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

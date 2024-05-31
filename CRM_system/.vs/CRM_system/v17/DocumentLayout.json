@@ -1,38 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\",
+  "WorkspaceRootPath": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\registrationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\managerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\managerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\detailsaboutdealcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\detailsaboutdealcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\entitydatamodels\\crmsysmodel\\crmsyscontextlinqqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:entitydatamodels\\crmsysmodel\\crmsyscontextlinqqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\illiahtml\\autorization.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:illiahtml\\autorization.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|e:\\coding\\learn\\asp.net\\crm\\crm_system\\entitydatamodels\\crmsysmodel\\crmsyscontextconcepts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:entitydatamodels\\crmsysmodel\\crmsyscontextconcepts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,99 +43,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-30T11:35:49.701Z",
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StatisticsController.cs",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\StatisticsController.cs",
+              "RelativeToolTip": "Controllers\\StatisticsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T15:00:15.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T19:18:48.515Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Autorization.html",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\ILLIAHTML\\Autorization.html",
-              "RelativeDocumentMoniker": "ILLIAHTML\\Autorization.html",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\ILLIAHTML\\Autorization.html",
-              "RelativeToolTip": "ILLIAHTML\\Autorization.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-05-29T19:15:24.671Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "site.css",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "Title": "RegistrationController.cs",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\RegistrationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RegistrationController.cs",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\RegistrationController.cs",
+              "RelativeToolTip": "Controllers\\RegistrationController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-05-29T19:15:22.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T15:55:33.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-27T15:55:26.579Z"
+              "WhenOpened": "2024-05-31T14:59:55.329Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CrmSysContextLinqQueries.cs",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\EntityDataModels\\CrmSysModel\\CrmSysContextLinqQueries.cs",
-              "RelativeDocumentMoniker": "EntityDataModels\\CrmSysModel\\CrmSysContextLinqQueries.cs",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\EntityDataModels\\CrmSysModel\\CrmSysContextLinqQueries.cs",
-              "RelativeToolTip": "EntityDataModels\\CrmSysModel\\CrmSysContextLinqQueries.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAKAAAA",
+              "Title": "ManagersController.cs",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\ManagersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ManagersController.cs",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\ManagersController.cs",
+              "RelativeToolTip": "Controllers\\ManagersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T15:52:13.988Z"
+              "WhenOpened": "2024-05-31T14:59:10.815Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CrmSysContextConcepts.cs",
-              "DocumentMoniker": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\EntityDataModels\\CrmSysModel\\CrmSysContextConcepts.cs",
-              "RelativeDocumentMoniker": "EntityDataModels\\CrmSysModel\\CrmSysContextConcepts.cs",
-              "ToolTip": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\EntityDataModels\\CrmSysModel\\CrmSysContextConcepts.cs",
-              "RelativeToolTip": "EntityDataModels\\CrmSysModel\\CrmSysContextConcepts.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "DocumentIndex": 3,
+              "Title": "DetailsAboutDealController.cs",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\DetailsAboutDealController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DetailsAboutDealController.cs",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\DetailsAboutDealController.cs",
+              "RelativeToolTip": "Controllers\\DetailsAboutDealController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T14:50:21.648Z"
+              "WhenOpened": "2024-05-31T14:58:14.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T14:55:46.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DealsController.cs",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\DealsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DealsController.cs",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\DealsController.cs",
+              "RelativeToolTip": "Controllers\\DealsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T14:36:02.941Z",
+              "EditorCaption": ""
             }
           ]
         }

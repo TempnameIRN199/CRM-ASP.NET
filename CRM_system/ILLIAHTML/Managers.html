@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Managers</title>
+<link rel="stylesheet" href="style.css">
+<script>
+    var a=0;
+    document.addEventListener('DOMContentLoaded', function () {
+    const newManagerBtn = document.querySelector('.new-manager-btn');
+    const managerModal = document.getElementById('manager-modal');
+    const managerModalForm = document.getElementById('manager-modal-form');
+    const managerModalCloseButton = document.querySelector('#manager-modal .close');
+    newManagerBtn.addEventListener('click', function () {
+        managerModal.style.display = 'block';
+        managerModalForm.reset();
+        managerModalForm.dataset.mode = 'add';
+    });
+    managerModalCloseButton.addEventListener('click', function () { managerModal.style.display = 'none'; });
+    window.addEventListener('click', function (event) {
+        if (event.target === managerModal) {
+            managerModal.style.display = 'none';
+        }
+    });
+    managerModalForm.addEventListener('submit', function (event) {
+        managerModal.style.display = 'none';
+        managerModalForm.reset();
+    });
+    });
+
+    function ChangeTheme(){
+        var buttonTheme = document.getElementById('buttonTheme');
+        var content = document.getElementById('content');
+        var header = document.getElementById('header');
+        var body = document.getElementById('body1');
+        var sidebar = document.getElementById('sidebar');
+        var h2Elements = document.querySelectorAll('h2');
+        var h1Elements = document.querySelectorAll('h1');
+        var aElements = document.querySelectorAll('a');
+        var customButtons = document.querySelectorAll('.custom-button');
+        var modalContent = document.querySelector('.modal-content');
+        var closeButton = document.querySelector('.close');
+        var buttonInTable1 = document.querySelectorAll('.buttonInTable1');
+        var buttonSubmit = document.getElementById('buttonSubmit');
+        if (a == 0) {
+            buttonTheme.textContent = "☀";
+            buttonTheme.style.backgroundColor = "whitesmoke";
+            buttonTheme.style.borderColor = "whitesmoke";
+            buttonTheme.style.color = "rgb(41, 41, 41)";
+            content.style.backgroundColor = "rgb(53, 53, 53)";
+            header.style.backgroundColor = "rgb(45, 45, 45)";
+            body.style.color = "whitesmoke";
+            sidebar.style.backgroundColor = "rgb(40, 40, 40)";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "whitesmoke";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "whitesmoke";
+            });
+            aElements.forEach(function(a) {
+                a.style.color = "whitesmoke";
+            });
+            customButtons.forEach(function(a) {
+                a.style.color = "whitesmoke";
+            });
+            buttonInTable1.forEach(function(button) {
+                button.style.color = "whitesmoke";
+            });
+            modalContent.style.backgroundColor = "rgb(45, 45, 45)";
+            closeButton.style.color = "whitesmoke";
+            buttonSubmit.style.backgroundColor="whitesmoke";
+            buttonSubmit.style.borderColor="whitesmoke";
+            buttonSubmit.style.color = "rgb(41, 41, 41)";
+            a = 1;
+        } 
+        else {
+            buttonTheme.textContent = "☾";
+            buttonTheme.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonTheme.style.borderColor = "rgb(41, 41, 41)";
+            buttonTheme.style.color = "whitesmoke";
+            content.style.backgroundColor = "#d3d3d3";
+            header.style.backgroundColor = "rgb(179, 179, 179)";
+            body.style.color = "rgb(41, 41, 41)";
+            sidebar.style.backgroundColor = "rgb(157, 157, 157)";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "rgb(41, 41, 41)";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "rgb(41, 41, 41)";
+            });
+            aElements.forEach(function(a) {
+                a.style.color = "rgb(41, 41, 41)";
+            });
+            customButtons.forEach(function(a) {
+                a.style.color = "rgb(41, 41, 41)";
+            });
+            buttonInTable1.forEach(function(button) {
+                button.style.color = "rgb(41, 41, 41)";
+            });
+            modalContent.style.backgroundColor = "#d3d3d3";
+            closeButton.style.color = "rgb(41, 41, 41)";
+            buttonSubmit.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonSubmit.style.borderColor = "rgb(41, 41, 41)";
+            buttonSubmit.style.color = "whitesmoke";
+            a = 0;
+        }
+    }
+    function updateValue(input) {
+        input.setAttribute('value', input.value);
+    }
+    
+</script>  
+</head>
+<body id="body1">
+    <div id="header" class="header">
+        <h1>CRM System</h1>
+        <div class="user-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
+            <span class="user-name">Kenny</span>
+            <button class="custom-button" style="width: 140px">Messages</button>
+            <button class="custom-button" style="width: 100px">Log Out</button>
+        </div>
+    </div>
+    <div class="main">
+        <div id="sidebar" class="sidebar">
+            <a href="#">First</a>
+            <a href="#">Second</a>
+            <a href="#">Third</a>
+            <a href="#">Fourth</a>
+            <a href="#">Fifth</a>
+            <a href="#">Sixth</a>
+            <a href="#">Seventh</a>
+        </div>
+        <div id="content" class="content">
+            <div class="table-header">
+                <h2>Managers</h2>
+                <button class="new-manager-btn" style="border: none; cursor: pointer; background-color: transparent; height: 50px; width: 50px; margin-left: 90%;"><img src="https://cdn-icons-png.flaticon.com/512/346/346569.png" alt="Button Icon"></button><br>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Surname</th>
+                            <th>Name</th>
+                            <th>Patronymic</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Login</th>
+                            <th>Password</th>
+                            <th>Dismiss</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vershinin</td>
+                            <td>Illia</td>
+                            <td>Oleksandrovich</td>
+                            <td>+380 67 293 98 85</td>
+                            <td>example@gmail.com</td>
+                            <td>versil</td>
+                            <td>qwerty123</td>
+                            <td><button class="buttonInTable1">&#x2718;</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
+</body>
+
+<div id="manager-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">New Manager</h2>
+        <form id="manager-modal-form">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" oninput="updateValue(this)" placeholder="Surname" required><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="nname" oninput="updateValue(this)" placeholder="Name" required><br>
+            <label for="patronymic">Patronymic:</label>
+            <input type="text" id="patronymic" name="patronymic" oninput="updateValue(this)" placeholder="Patronymic" required><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" oninput="updateValue(this)" placeholder="+380 67 777 77 77" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" oninput="updateValue(this)" placeholder="email@gmail.com" required><br>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" oninput="updateValue(this)" placeholder="Login" required><br>
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password" oninput="updateValue(this)" placeholder="********" required><br>
+            <button type="submit" id="buttonSubmit">Add Manager</button>
+        </form>
+    </div>
+</div>
+</html>

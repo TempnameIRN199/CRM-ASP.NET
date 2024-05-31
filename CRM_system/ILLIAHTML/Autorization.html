@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autorization</title>
+<link rel="stylesheet" href="style.css">
+<script>
+    var a=0;
+    function ChangeTheme(){
+        var buttonTheme = document.getElementById('buttonTheme');
+        var buttonSubmit = document.getElementById('buttonSubmit');
+        var divblock = document.getElementById('block');
+        var body = document.getElementById('body');
+        var h2Elements = document.querySelectorAll('h2');
+        var h1Elements = document.querySelectorAll('h1');
+        if (a == 0) {
+            buttonTheme.textContent = "☀";
+            buttonTheme.style.backgroundColor = "whitesmoke";
+            buttonTheme.style.borderColor = "whitesmoke";
+            buttonTheme.style.color = "rgb(41, 41, 41)";
+            buttonSubmit.style.backgroundColor="whitesmoke";
+            buttonSubmit.style.borderColor="whitesmoke";
+            buttonSubmit.style.color = "rgb(41, 41, 41)";
+
+            body.style.backgroundColor = "rgb(41, 41, 41)";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "whitesmoke";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "whitesmoke";
+            });
+            block.style.borderColor="whitesmoke";
+            a = 1;
+        } 
+        else {
+            buttonTheme.textContent = "☾";
+            buttonTheme.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonTheme.style.borderColor = "rgb(41, 41, 41)";
+            buttonTheme.style.color = "whitesmoke";
+            buttonSubmit.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonSubmit.style.borderColor = "rgb(41, 41, 41)";
+            buttonSubmit.style.color = "whitesmoke";
+            body.style.backgroundColor = "#D2D2D2";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "rgb(41, 41, 41)";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "rgb(41, 41, 41)";
+            });
+            block.style.borderColor="rgb(41, 41, 41)";
+
+            a = 0;
+        }
+    }
+</script>  
+</head>
+<body id="body" style="background-color: #D2D2D2;">
+<div id="block">
+    <form>
+        <h1 style="font-size: 50px;">Autorization</h1>
+        <h3>Log in for CRM</h3>
+        <div class="blockWithText">
+            <h2>Email</h2>
+            <input type="email" placeholder="email@gmail.com">
+        </div>
+        <div class="blockWithText">
+            <h2>Password</h2>
+            <input type="password"  placeholder="********">
+        </div>
+        <br>
+        <button id="buttonSubmit">Log In</button>
+    </form>
+    <br>
+    <a href="Registration.html">Registration</a>
+</div>
+<button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
+</body>
+</html>

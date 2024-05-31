@@ -2,12 +2,13 @@ using CRM_system.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+// 
+
 namespace CRM_system.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;

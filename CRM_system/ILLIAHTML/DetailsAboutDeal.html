@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deal</title>
+<link rel="stylesheet" href="style.css"> 
+<script>
+    var a=0;
+    function ChangeTheme(){
+        var buttonTheme = document.getElementById('buttonTheme');
+        var content = document.getElementById('content3');
+        var content1 = document.getElementById('content2');
+        var header = document.getElementById('header');
+        var body = document.getElementById('body1');
+        var sidebar = document.getElementById('sidebar');
+        var h2Elements = document.querySelectorAll('h2');
+        var h1Elements = document.querySelectorAll('h1');
+        var aElements = document.querySelectorAll('a');
+        var customButtons = document.querySelectorAll('.custom-button');
+        if (a == 0) {
+            buttonTheme.textContent = "☀";
+            buttonTheme.style.backgroundColor = "whitesmoke";
+            buttonTheme.style.borderColor = "whitesmoke";
+            buttonTheme.style.color = "rgb(41, 41, 41)";
+            content.style.backgroundColor = "rgb(53, 53, 53)";
+            content1.style.backgroundColor = "rgb(70, 70, 70)";
+            header.style.backgroundColor = "rgb(45, 45, 45)";
+            body.style.color = "whitesmoke";
+            sidebar.style.backgroundColor = "rgb(40, 40, 40)";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "whitesmoke";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "whitesmoke";
+            });
+            aElements.forEach(function(a) {
+                a.style.color = "whitesmoke";
+            });
+            customButtons.forEach(function(a) {
+                a.style.color = "whitesmoke";
+            });
+            a = 1;
+        } 
+        else {
+            buttonTheme.textContent = "☾";
+            buttonTheme.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonTheme.style.borderColor = "rgb(41, 41, 41)";
+            buttonTheme.style.color = "whitesmoke";
+            content.style.backgroundColor = " #c4c4c4";
+            content1.style.backgroundColor = " #d3d3d3";
+            header.style.backgroundColor = "rgb(179, 179, 179)";
+            body.style.color = "rgb(41, 41, 41)";
+            sidebar.style.backgroundColor = "rgb(157, 157, 157)";
+            h2Elements.forEach(function(h2) {
+                h2.style.color = "rgb(41, 41, 41)";
+            });
+            h1Elements.forEach(function(h1) {
+                h1.style.color = "rgb(41, 41, 41)";
+            });
+            aElements.forEach(function(a) {
+                a.style.color = "rgb(41, 41, 41)";
+            });
+            customButtons.forEach(function(a) {
+                a.style.color = "rgb(41, 41, 41)";
+            });
+            a = 0;
+        }
+    }
+</script>   
+</head>
+<body id="body1">
+    <div id="header" class="header">
+        <h1>CRM System</h1>
+        <div class="user-info">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
+            <span class="user-name">Kenny</span>
+            <button class="custom-button" style="width: 140px">Messages</button>
+            <button class="custom-button" style="width: 100px">Log Out</button>
+        </div>
+    </div>
+    <div class="main">
+        <div id="sidebar" class="sidebar">
+            <a href="#">First</a>
+            <a href="#">Second</a>
+            <a href="#">Third</a>
+            <a href="#">Fourth</a>
+            <a href="#">Fifth</a>
+            <a href="#">Sixth</a>
+            <a href="#">Seventh</a>
+        </div>
+        <div id="content3" class="content3">
+            <div class="user-info1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
+                <span class="user-name">Vlad</span>
+            </div>
+            <br>
+            <div class="user-info1">
+                <span class="user-name">Phone</span>
+                <span class="user-name">00000000000</span>
+            </div>
+            <br>
+            <div class="user-info1">
+                <span class="user-name">Email</span>
+                <span class="user-name">taraskutuz@gmail.com
+                </span>
+            </div>  
+            <br>
+            <div class="user-info1">
+                <span class="user-name">Budget</span>
+                <span class="user-name">10000$</span>
+            </div>  
+            <br>
+            <div class="user-info1">
+                <span class="user-name">num of notations</span>
+                <span class="user-name">2</span>
+            </div>
+            <br>
+            <div class="user-info1">
+                <span class="user-name">num of events</span>
+                <span class="user-name">2</span>
+            </div>
+            <br>
+            <span class="user-name">Description</span>
+            <br>
+            <div>
+            <span class="description">BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL </span>
+        </div>
+        </div>
+        <div id="content2" class="content2">
+            <div id="clientRecord">
+                <div class="clientRecord">
+                    <div class="user-info">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
+                        <span class="user-name">Kenny</span>
+                    </div>
+                    <span class="user-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut nulla mi. Curabitur lobortis erat ut tempor accumsan. Maecenas et nulla elit. In vel fringilla purus, ut interdum lacus. Praesent ut urna id dui lobortis pretium. Etiam eu metus ultrices, porta lacus vitae, cursus elit. Aliquam feugiat, enim nec vestibulum gravida, magna sapien dignissim elit, nec scelerisque eros libero vel risus. Nulla sit amet lacus sit amet orci condimentum pretium sed ut nunc. In hac habitasse platea dictumst. Nullam suscipit fringilla porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tortor purus, interdum quis accumsan sit amet, mollis sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                    </span>    
+                </div>
+                <div class="clientRecord">
+                    <div class="user-info">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
+                        <span class="user-name">Anna</span>
+                    </div>
+                    <span class="user-name">afsd!</span>    
+                </div>
+            </div>
+            <div id="dealRecord">
+                <div class="dealRecord">
+                    <span class="user-name">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut nulla mi. Curabitur lobortis erat ut tempor accumsan. Maecenas et nulla elit. In vel fringilla purus, ut interdum lacus. Praesent ut urna id dui lobortis pretium. Etiam eu metus ultrices, porta lacus vitae, cursus elit. Aliquam feugiat, enim nec vestibulum gravida, magna sapien dignissim elit, nec scelerisque eros libero vel risus. Nulla sit amet lacus sit amet orci condimentum pretium sed ut nunc. In hac habitasse platea dictumst. Nullam suscipit fringilla porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tortor purus, interdum quis accumsan sit amet, mollis sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                    </span>    
+                </div>
+                <div class="dealRecord">
+                   
+                    <span class="user-name">Duis egestas accumsan sem, sed semper lectus sollicitudin a. Nulla malesuada ipsum nec ex ornare, vel interdum eros suscipit. Duis ac nibh sed sem scelerisque eleifend eu quis quam. Nulla consectetur lacus in fermentum porta. Nam imperdiet, elit sit amet blandit fringilla, mi est commodo lectus, et finibus velit augue eget tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vitae suscipit metus, ac dignissim leo. Mauris elit urna, ultricies egestas mattis sed, cursus non neque. Sed quis quam a sapien consectetur facilisis. Praesent sed dolor id neque imperdiet scelerisque. Sed consequat volutpat enim, eget volutpat nibh venenatis eget.</span>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
+</body>
+</html>

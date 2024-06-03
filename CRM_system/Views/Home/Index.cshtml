@@ -52,22 +52,22 @@
 </script>
 <body id="body" style="background-color: #D2D2D2;">
     <div id="block">
-        <form>
+        <form asp-action="Login" method="post">
             <h1 style="font-size: 50px;">Autorization</h1>
             <h3>Log in for CRM</h3>
             <div class="blockWithText">
                 <h2>Email</h2>
-                <input type="email" placeholder="email@gmail.com">
+                <input type="email" name="Email" placeholder="email@gmail.com">
             </div>
             <div class="blockWithText">
                 <h2>Password</h2>
-                <input type="password" placeholder="********">
+                <input type="password" name="Password" placeholder="********">
             </div>
             <br>
-            <button id="buttonSubmit">Log In</button>
+            <button type="submit" id="buttonSubmit">Log In</button>
         </form>
         <br>
-        <a href="Registration.html">Registration</a>
+        <a href="Registration/">Registration</a>
     </div>
     <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
 </body>

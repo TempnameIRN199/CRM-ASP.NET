@@ -108,6 +108,7 @@ h1, h2 {
 .buttonTheme {
     background-color: rgb(41, 41, 41);
     color: whitesmoke;
+    cursor: pointer;
     border: 0px rgb(41, 41, 41) solid;
     border-radius: 10px;
     position: absolute;
@@ -286,6 +287,7 @@ h3 {
 
 #buttonSubmit {
     width: 80%;
+    cursor: pointer;
     background-color: rgb(41, 41, 41);
     color: whitesmoke;
     border: 0px rgb(41, 41, 41) solid;

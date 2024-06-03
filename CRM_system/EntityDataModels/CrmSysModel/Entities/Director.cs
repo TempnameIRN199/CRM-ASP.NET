@@ -30,7 +30,7 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [EmailAddress]
         public string Email { set; get; }
 
-        public short CompanyId { set; get; }
+        public short? CompanyId { set; get; }
 
         public short DirectorAcctLogPwdId { set; get; }
 
@@ -41,7 +41,8 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         public virtual DirectorAcctLogPwd DirectorAcctLogPwd { set; get; }
 
         public Director()
-        { }
+        {
+        }
 
         public Director(in string inSurname, in string inName, in string inPhone, in string inEmail,
             in short inCompanyId, in short inDirectorAcctLogPwdId) : this(0, inSurname, inName, inPhone, inEmail, inCompanyId, inDirectorAcctLogPwdId)

@@ -5,7 +5,7 @@
     height: 100vh;
     flex-direction: column;
     color: rgb(41, 41, 41);
-    transition: background-color 0.3s ease;   
+    transition: background-color 0.3s ease;     
 }
 body{
     background-color: #D2D2D2;

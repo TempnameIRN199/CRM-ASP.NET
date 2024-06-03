@@ -31,9 +31,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [EmailAddress]
         public string Email { set; get; }
 
+        [ForeignKey(nameof(DealId))]
         public long DealId { set; get; }
 
-        [ForeignKey(nameof(DealId))]
         public virtual Deal Deal { set; get; }
 
         public virtual ICollection<ClientNotation> ClientNotations { set; get; }

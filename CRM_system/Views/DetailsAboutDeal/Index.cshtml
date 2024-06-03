@@ -1,9 +1,20 @@
 ﻿<script>
     var a = 0;
+    function toggleDateInput() {
+        var recordTypeSelect = document.getElementById('record-type');
+        var dateInput = document.getElementById('date-input');
+
+        if (recordTypeSelect.value === 'About deal') {
+            dateInput.style.visibility = 'visible';
+        } else {
+            dateInput.style.visibility = 'hidden';
+        }
+    }
     function ChangeTheme() {
         var buttonTheme = document.getElementById('buttonTheme');
         var content = document.getElementById('content3');
         var content1 = document.getElementById('content2');
+        var buttonAdd = document.getElementById('button-add');
         var header = document.getElementById('header');
         var body = document.getElementById('body1');
         var sidebar = document.getElementById('sidebar');
@@ -18,6 +29,8 @@
             buttonTheme.style.color = "rgb(41, 41, 41)";
             content.style.backgroundColor = "rgb(53, 53, 53)";
             content1.style.backgroundColor = "rgb(70, 70, 70)";
+            buttonAdd.style.background = "whitesmoke";
+            buttonAdd.style.color = "rgb(41, 41, 41)";
             header.style.backgroundColor = "rgb(45, 45, 45)";
             body.style.color = "whitesmoke";
             sidebar.style.backgroundColor = "rgb(40, 40, 40)";
@@ -42,6 +55,8 @@
             buttonTheme.style.color = "whitesmoke";
             content.style.backgroundColor = " #c4c4c4";
             content1.style.backgroundColor = " #d3d3d3";
+            buttonAdd.style.background = "rgb(41, 41, 41)";
+            buttonAdd.style.color = "whitesmoke";
             header.style.backgroundColor = "rgb(179, 179, 179)";
             body.style.color = "rgb(41, 41, 41)";
             sidebar.style.backgroundColor = "rgb(157, 157, 157)";
@@ -61,6 +76,7 @@
         }
     }
 </script>
+</head>
 <body id="body1">
     <div id="header" class="header">
         <h1>CRM System</h1>
@@ -152,6 +168,13 @@
                     <span class="user-name">Duis egestas accumsan sem, sed semper lectus sollicitudin a. Nulla malesuada ipsum nec ex ornare, vel interdum eros suscipit. Duis ac nibh sed sem scelerisque eleifend eu quis quam. Nulla consectetur lacus in fermentum porta. Nam imperdiet, elit sit amet blandit fringilla, mi est commodo lectus, et finibus velit augue eget tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vitae suscipit metus, ac dignissim leo. Mauris elit urna, ultricies egestas mattis sed, cursus non neque. Sed quis quam a sapien consectetur facilisis. Praesent sed dolor id neque imperdiet scelerisque. Sed consequat volutpat enim, eget volutpat nibh venenatis eget.</span>
                 </div>
             </div>
+            <select class="select-style" id="record-type" onchange="toggleDateInput()">
+                <option>About client</option>
+                <option>About deal</option>
+            </select>
+            <input class="input-style" type="text">
+            <input id="date-input" class="input-style1" type="date" style="visibility: hidden;">
+            <button id="button-add" class="button-add">Add</button>
         </div>
     </div>
     <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>

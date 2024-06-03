@@ -30,16 +30,24 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [EmailAddress]
         public string Email { set; get; }
 
+        //------------------------------
+
         [Required]
+        [ForeignKey(nameof(CompanyId))]
         public short CompanyId { set; get; }
 
-        public int ManagerAcctLogPwdId { set; get; }
-
-        [ForeignKey(nameof(CompanyId))]
         public virtual Company Company { set; get; }
+
+        //------------------------------
+
+
+        //------------------------------
+        public int ManagerAcctLogPwdId { set; get; }
 
         [ForeignKey(nameof(ManagerAcctLogPwdId))]
         public virtual ManagerAcctLogPwd ManagerAcctLogPwd { set; get; }
+
+        //------------------------------
 
         public Manager()
         { }

@@ -33,16 +33,30 @@ namespace CRM_system.Controllers
         [HttpPost]
         public IActionResult Login(string email, string password)
         {
-            List<DirectorAcctLogPwd> dirLog = CrmSysContext.LinqQueries.GetInformationQueries.GetAllLoginDirector(_context);
-            DirectorAcctLogPwd director = dirLog.FirstOrDefault(d => d.Login == email && d.Password == password);
-            if (director != null)
+            Director director = CrmSysContext.LinqQueries.GetInformationQueries.GetDirectorByAcctLogPwd(_context, email, password);
+            Manager manager = CrmSysContext.LinqQueries.GetInformationQueries.GetManagerByAcctLogPwd(_context, email, password);
+
+            if (director == null && manager != null)
             {
-                return View("/Statistics/Index");
+                TempData["UserId"] = (int)manager.Id;
+                TempData["UserRole"] = "Manager";
+                return RedirectToAction("Index", "Statistics");
+            }
+            else if (director != null && manager == null)
+            {
+                TempData["UserId"] = (int)director.Id;
+                TempData["UserRole"] = "Director";
+                return RedirectToAction("Index", "Statistics");
+            }
+            else if (director == null && manager == null)
+            {
+                return Unauthorized(new { message = "Invalid email or password" });
             }
             else
             {
-                return RedirectToAction("Index");
+                return Unauthorized(new { message = "Another error" });
             }
         }
+
     }
 }

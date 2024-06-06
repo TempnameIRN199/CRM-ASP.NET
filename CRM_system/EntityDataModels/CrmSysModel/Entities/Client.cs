@@ -32,7 +32,7 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         public string Email { set; get; }
 
         [ForeignKey(nameof(DealId))]
-        public long DealId { set; get; }
+        public long? DealId { set; get; }
 
         public virtual Deal Deal { set; get; }
 

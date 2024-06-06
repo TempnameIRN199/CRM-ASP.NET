@@ -229,6 +229,24 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
                 {
                     return inCrmSysContext.DirectorsAcctsLogsPwds.ToList();
                 }
+
+                public static Director GetDirectorByAcctLogPwd(CrmSysContext inCrmSysContext, string inLogin, string inPassword)
+                {
+                    var accountLogPwd = inCrmSysContext.DirectorsAcctsLogsPwds
+                        .Include("Director")
+                        .FirstOrDefault(acctLogPwd => acctLogPwd.Login == inLogin && acctLogPwd.Password == inPassword);
+
+                    return accountLogPwd?.Director;
+                }
+
+                public static Manager GetManagerByAcctLogPwd(CrmSysContext inCrmSysContext, string inLogin, string inPassword)
+                {
+                    var accountLogPwd = inCrmSysContext.ManagersAcctsLogsPwds
+                        .Include("Manager")
+                        .FirstOrDefault(acctLogPwd => acctLogPwd.Login == inLogin && acctLogPwd.Password == inPassword);
+
+                    return accountLogPwd?.Manager;
+                }
             }
         }
     }

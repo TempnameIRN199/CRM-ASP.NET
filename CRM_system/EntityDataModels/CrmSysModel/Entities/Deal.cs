@@ -22,7 +22,7 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [Required]
         public double Amount { set; get; }
 
-        public long ClientId { set; get; }
+        public long? ClientId { set; get; }
 
         [Required]
         public int ManagerId { set; get; }

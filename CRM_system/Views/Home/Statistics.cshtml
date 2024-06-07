@@ -1,4 +1,9 @@
-﻿<script>
+﻿@model CRM_system.Controllers.StatisticViewModel
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<script>
     var a = 0;
     function ChangeTheme() {
         var buttonTheme = document.getElementById('buttonTheme');
@@ -63,7 +68,7 @@
         <h1>CRM System</h1>
         <div class="user-info">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
-            <span class="user-name">Kenny</span>
+            <span class="user-name">@Model.Name</span>
             <button class="custom-button" style="width: 140px">Messages</button>
             <button class="custom-button" style="width: 100px">Log Out</button>
         </div>

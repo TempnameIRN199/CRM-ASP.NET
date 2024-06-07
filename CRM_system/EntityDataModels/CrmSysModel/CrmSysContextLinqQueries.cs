@@ -219,6 +219,34 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
                         (inDeal, inDealEvent) => new { Deal = inDeal, DealEvent = inDealEvent}).
                     Where((inFirstResult) => inFirstResult.Deal.ManagerId == inManagerId).
                     Select((inSecondResult) => inSecondResult.DealEvent).ToList();
+
+                public static List<Director> GetAllDirectors(in CrmSysContext inCrmSysContext)
+                {
+                    return inCrmSysContext.Directors.ToList();
+                }
+
+                public static List<DirectorAcctLogPwd> GetAllLoginDirector(in CrmSysContext inCrmSysContext)
+                {
+                    return inCrmSysContext.DirectorsAcctsLogsPwds.ToList();
+                }
+
+                public static Director GetDirectorByAcctLogPwd(CrmSysContext inCrmSysContext, string inLogin, string inPassword)
+                {
+                    var accountLogPwd = inCrmSysContext.DirectorsAcctsLogsPwds
+                        .Include("Director")
+                        .FirstOrDefault(acctLogPwd => acctLogPwd.Login == inLogin && acctLogPwd.Password == inPassword);
+
+                    return accountLogPwd?.Director;
+                }
+
+                public static Manager GetManagerByAcctLogPwd(CrmSysContext inCrmSysContext, string inLogin, string inPassword)
+                {
+                    var accountLogPwd = inCrmSysContext.ManagersAcctsLogsPwds
+                        .Include("Manager")
+                        .FirstOrDefault(acctLogPwd => acctLogPwd.Login == inLogin && acctLogPwd.Password == inPassword);
+
+                    return accountLogPwd?.Manager;
+                }
             }
         }
     }

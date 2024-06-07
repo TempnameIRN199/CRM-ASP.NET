@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.CodeAnalysis;
 
 namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
 {
@@ -20,9 +19,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [Required]
         public DateTime DateOfEstab { set; get; }
 
-        [ForeignKey(nameof(DirectorId))]
-        public short? DirectorId { set; get; }
+        public short DirectorId { set; get; }
 
+        [ForeignKey(nameof(DirectorId))]
         public virtual Director Director { set; get; }
 
         public virtual ICollection<Manager> Managers { set; get; }

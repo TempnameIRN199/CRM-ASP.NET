@@ -16,6 +16,10 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
             Database.EnsureCreated();
         }
 
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //}
+
         public DbSet<Director> Directors { set; get; }
         public DbSet<Manager> Managers { set; get; }
         public DbSet<Client> Clients { set; get; }

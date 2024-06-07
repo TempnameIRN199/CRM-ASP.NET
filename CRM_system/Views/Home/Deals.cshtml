@@ -1,4 +1,84 @@
 ﻿<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const newManagerBtn = document.querySelector('.new-manager-btn');
+        const managerModal = document.getElementById('manager-modal');
+        const managerModalForm = document.getElementById('manager-modal-form');
+        const managerModalCloseButton = document.querySelector('#manager-modal .close');
+        const moreButtons = document.querySelectorAll('.buttonInTable');
+
+        newManagerBtn.addEventListener('click', function () {
+            managerModal.style.display = 'block';
+            managerModalForm.reset();
+            managerModalForm.dataset.mode = 'add';
+        });
+
+        managerModalCloseButton.addEventListener('click', function () { managerModal.style.display = 'none'; });
+
+        window.addEventListener('click', function (event) {
+            if (event.target === managerModal) {
+                managerModal.style.display = 'none';
+            }
+        });
+
+        managerModalForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(managerModalForm);
+            const mode = managerModalForm.dataset.mode;
+
+            const requestData = {
+                Description: formData.get('password'),
+                Date: new Date(),
+                Amount: parseFloat(formData.get('login')),
+                ClientId: 1, 
+                ManagerId: 1,
+                DealStatusId: 1, 
+                Surname: formData.get('surname'),
+                Name: formData.get('name'),
+                Patronymic: formData.get('patronymic'),
+                Phone: formData.get('phone'),
+                Email: formData.get('email')
+            };
+
+            fetch('/Deals/Create', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        managerModal.style.display = 'none';
+                        managerModalForm.reset();
+                    } 
+                    else 
+                    {
+
+                    }
+                })
+        });
+
+        moreButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const row = button.parentNode.parentNode;
+                const cells = row.cells;
+
+                managerModalForm.surname.value = cells[0].textContent;
+                managerModalForm.name.value = cells[1].textContent;
+                managerModalForm.patronymic.value = cells[2].textContent;
+                managerModalForm.phone.value = cells[3].textContent;
+                managerModalForm.email.value = cells[4].textContent;
+                managerModalForm.login.value = cells[5].textContent.replace('$', '');
+                managerModalForm.password.value = cells[6].textContent;
+
+                managerModal.style.display = 'block';
+                managerModalForm.dataset.mode = 'edit';
+            });
+        });
+    });
+
     var a = 0;
     document.addEventListener('DOMContentLoaded', function () {
         const newManagerBtn = document.querySelector('.new-manager-btn');
@@ -160,19 +240,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Vershinin</td>
-                            <td>Illia</td>
-                            <td>Oleksandrovich</td>
-                            <td>+380 67 293 98 85</td>
-                            <td>example@gmail.com</td>
-                            <td>10000$</td>
-                            <!-- тут крч $ добавлять после считывания с таблицы -->
-                            <td>авт.дтл.дыфптлждыфваоваоыватлждатлд птлждодаод</td>
-                            <td><button class="buttonInTable">More</button></td>
-                            <td><button class="buttonInTable1">✔</button></td>
-                            <td><button class="buttonInTable1">&#x2718;</button></td>
-                        </tr>
+                        @foreach (var deal in Model)
+                        {
+                            <tr>
+                                <td>@deal.Description</td>
+                                <td>@deal.Date</td>
+                                <td>@deal.Amount</td>
+                                <td>@deal.Client.Name</td>
+                                <td>@deal.Manager.Name</td>
+                                <td>@deal.DealStatus.StatusName</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

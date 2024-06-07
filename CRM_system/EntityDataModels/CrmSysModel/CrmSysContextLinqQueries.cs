@@ -219,16 +219,6 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel
                         (inDeal, inDealEvent) => new { Deal = inDeal, DealEvent = inDealEvent}).
                     Where((inFirstResult) => inFirstResult.Deal.ManagerId == inManagerId).
                     Select((inSecondResult) => inSecondResult.DealEvent).ToList();
-
-                public static List<Director> GetAllDirectors(in CrmSysContext inCrmSysContext)
-                {
-                    return inCrmSysContext.Directors.ToList();
-                }
-
-                public static List<DirectorAcctLogPwd> GetAllLoginDirector(in CrmSysContext inCrmSysContext)
-                {
-                    return inCrmSysContext.DirectorsAcctsLogsPwds.ToList();
-                }
             }
         }
     }

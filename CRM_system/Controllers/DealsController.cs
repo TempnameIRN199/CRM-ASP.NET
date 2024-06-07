@@ -1,83 +1,37 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using CRM_system.Models.EntityDataModels.CrmSysModel;
+using CRM_system.Models.EntityDataModels.CrmSysModel.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRM_system.Controllers
 {
-    public class DealsController : Controller
-    {
-        // GET: DealsController
-        public ActionResult Index()
-        {
-            return View();
-        }
+	public class DealsController : Controller
+	{
+		private readonly CrmSysContext _context;
 
-        // GET: DealsController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+		public DealsController(CrmSysContext context)
+		{
+			_context = context;
+		}
 
-        // GET: DealsController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
+		// GET: Deals/Create
+		public IActionResult Create()
+		{
+			return View();
+		}
 
-        // POST: DealsController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+		// POST: Deals/Create
+		[HttpPost]
+        public async Task<IActionResult> Index()
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            var deals = await _context.Deals
+                .Include(d => d.Client)     
+                .Include(d => d.Manager)     
+                .Include(d => d.DealStatus)  
+                .ToListAsync();
 
-        // GET: DealsController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: DealsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: DealsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: DealsController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            return View(deals);
         }
     }
 }

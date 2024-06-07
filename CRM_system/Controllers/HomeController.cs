@@ -31,18 +31,9 @@ namespace CRM_system.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string email, string password)
+        public IActionResult Login()
         {
-            List<DirectorAcctLogPwd> dirLog = CrmSysContext.LinqQueries.GetInformationQueries.GetAllLoginDirector(_context);
-            DirectorAcctLogPwd director = dirLog.FirstOrDefault(d => d.Login == email && d.Password == password);
-            if (director != null)
-            {
-                return View("/Statistics/Index");
-            }
-            else
-            {
-                return RedirectToAction("Index");
-            }
+            return View("Deals");
         }
     }
 }

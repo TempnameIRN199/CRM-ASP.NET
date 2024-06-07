@@ -19,9 +19,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [StringLength(50, MinimumLength = 1)]
         public string Password { set; get; }
 
-        [ForeignKey(nameof(DirectorId))]
-        public short? DirectorId { set; get; }
+        public short DirectorId { set; get; }
 
+        [ForeignKey(nameof(DirectorId))]
         public virtual Director Director { set; get; }
 
         public DirectorAcctLogPwd()

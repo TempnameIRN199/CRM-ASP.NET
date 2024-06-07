@@ -12,15 +12,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRM_system.Migrations
 {
     [DbContext(typeof(CrmSysContext))]
-    [Migration("20240531213830_test2")]
-    partial class test2
+    [Migration("20240607103925_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -33,7 +33,7 @@ namespace CRM_system.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<long>("DealId")
+                    b.Property<long?>("DealId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("Email")
@@ -125,7 +125,7 @@ namespace CRM_system.Migrations
                     b.Property<double>("Amount")
                         .HasColumnType("float");
 
-                    b.Property<long>("ClientId")
+                    b.Property<long?>("ClientId")
                         .HasColumnType("bigint");
 
                     b.Property<DateTime>("Date")
@@ -145,7 +145,8 @@ namespace CRM_system.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ClientId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[ClientId] IS NOT NULL");
 
                     b.HasIndex("DealStatusId");
 
@@ -255,7 +256,7 @@ namespace CRM_system.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<short>("Id"));
 
-                    b.Property<short>("DirectorId")
+                    b.Property<short?>("DirectorId")
                         .HasColumnType("smallint");
 
                     b.Property<string>("Login")
@@ -361,9 +362,7 @@ namespace CRM_system.Migrations
                 {
                     b.HasOne("CRM_system.Models.EntityDataModels.CrmSysModel.Entities.Client", "Client")
                         .WithOne("Deal")
-                        .HasForeignKey("CRM_system.Models.EntityDataModels.CrmSysModel.Entities.Deal", "ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CRM_system.Models.EntityDataModels.CrmSysModel.Entities.Deal", "ClientId");
 
                     b.HasOne("CRM_system.Models.EntityDataModels.CrmSysModel.Entities.DealStatus", "DealStatus")
                         .WithMany("Deals")

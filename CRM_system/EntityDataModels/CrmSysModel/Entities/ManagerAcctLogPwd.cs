@@ -19,9 +19,9 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         [StringLength(50, MinimumLength = 1)]
         public string Password { set; get; }
 
+        [ForeignKey(nameof(ManagerId))]
         public int ManagerId { set; get; }
 
-        [ForeignKey(nameof(ManagerId))]
         public virtual Manager Manager { set; get; }
 
         public ManagerAcctLogPwd()

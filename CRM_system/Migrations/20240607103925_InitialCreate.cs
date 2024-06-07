@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CRM_system.Migrations
 {
     /// <inheritdoc />
-    public partial class asdasd : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,7 +26,7 @@ namespace CRM_system.Migrations
                     Patronymic = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DealId = table.Column<long>(type: "bigint", nullable: false)
+                    DealId = table.Column<long>(type: "bigint", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -42,7 +42,7 @@ namespace CRM_system.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     DateOfEstab = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DirectorId = table.Column<short>(type: "smallint", nullable: false)
+                    DirectorId = table.Column<short>(type: "smallint", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -72,7 +72,7 @@ namespace CRM_system.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Login = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    DirectorId = table.Column<short>(type: "smallint", nullable: false)
+                    DirectorId = table.Column<short>(type: "smallint", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -130,7 +130,7 @@ namespace CRM_system.Migrations
                     Patronymic = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CompanyId = table.Column<short>(type: "smallint", nullable: false),
+                    CompanyId = table.Column<short>(type: "smallint", nullable: true),
                     DirectorAcctLogPwdId = table.Column<short>(type: "smallint", nullable: false)
                 },
                 constraints: table =>
@@ -141,8 +141,7 @@ namespace CRM_system.Migrations
                         column: x => x.CompanyId,
                         principalSchema: "dbo",
                         principalTable: "TBL_Companies",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_TBL_Directors_TBL_DirectorsAcctsLogsPwds_DirectorAcctLogPwdId",
                         column: x => x.DirectorAcctLogPwdId,
@@ -196,7 +195,7 @@ namespace CRM_system.Migrations
                     Description = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Amount = table.Column<double>(type: "float", nullable: false),
-                    ClientId = table.Column<long>(type: "bigint", nullable: false),
+                    ClientId = table.Column<long>(type: "bigint", nullable: true),
                     ManagerId = table.Column<int>(type: "int", nullable: false),
                     DealStatusId = table.Column<byte>(type: "tinyint", nullable: false)
                 },
@@ -208,8 +207,7 @@ namespace CRM_system.Migrations
                         column: x => x.ClientId,
                         principalSchema: "dbo",
                         principalTable: "TBL_Clients",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_TBL_Deals_TBL_DealStatuses_DealStatusId",
                         column: x => x.DealStatusId,
@@ -260,7 +258,8 @@ namespace CRM_system.Migrations
                 schema: "dbo",
                 table: "TBL_Deals",
                 column: "ClientId",
-                unique: true);
+                unique: true,
+                filter: "[ClientId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TBL_Deals_DealStatusId",
@@ -285,7 +284,8 @@ namespace CRM_system.Migrations
                 schema: "dbo",
                 table: "TBL_Directors",
                 column: "CompanyId",
-                unique: true);
+                unique: true,
+                filter: "[CompanyId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TBL_Directors_DirectorAcctLogPwdId",

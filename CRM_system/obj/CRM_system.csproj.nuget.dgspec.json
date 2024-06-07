@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj": {}
+    "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\CRM_system.csproj": {}
   },
   "projects": {
-    "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj": {
+    "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\CRM_system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj",
+        "projectUniqueName": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\CRM_system.csproj",
         "projectName": "CRM_system",
-        "projectPath": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\CRM_system.csproj",
-        "packagesPath": "C:\\Users\\Семён\\.nuget\\packages\\",
-        "outputPath": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\obj\\",
+        "projectPath": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\CRM_system.csproj",
+        "packagesPath": "C:\\Users\\vitya\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\Learn\\ASP.NET\\CRM\\CRM_system\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "D:\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vitya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

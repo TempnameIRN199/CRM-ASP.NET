@@ -30,11 +30,11 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         public Company()
         { }
 
-        public Company(in string inName, in DateTime inDateOfEstab, in short inDirectorId) :
+        public Company(in string inName, in DateTime inDateOfEstab, in short? inDirectorId) :
             this(0, inName, inDateOfEstab, inDirectorId)
         { }
 
-        public Company(in short inId, in string inName, in DateTime inDateOfEstab, in short inDirectorId)
+        public Company(in short inId, in string inName, in DateTime inDateOfEstab, in short? inDirectorId)
         {
             Id = inId;
             Name = inName;

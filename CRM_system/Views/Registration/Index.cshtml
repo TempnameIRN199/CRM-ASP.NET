@@ -50,47 +50,50 @@
     }
 </script>
 <body id="body">
-    <form>
-<div  id="forfirstblock">
-        <h1>Registration</h1>
-        <h3>Sign in for CRM</h3>
-        <div class="blockWithText">
-            <h2>Email</h2>
-            <input type="email" placeholder="email@gmail.com">
+    <form asp-action="Registration" method="post">
+        <div  id="forfirstblock">
+                <h1>Registration</h1>
+                <h3>Sign in for CRM</h3>
+                <div class="blockWithText">
+                    <h2>Email</h2>
+                    <input type="email" name="email" placeholder="email@gmail.com" required>
+                </div>
+                <div class="blockWithText">
+                    <h2>Telephone</h2>
+                        <input type="phone" name="phone" placeholder="+380977777777" required>
+                </div><div class="blockWithText">
+                    <h2>Fullname</h2>
+                        <input type="text" name="fullname" placeholder="Kutuzov Taras Pavlovich" required>
+                </div>
+                <div class="blockWithText">
+                    <h2>Login</h2>
+                        <input type="text" name="login" placeholder="IAmLogin" required>
+                </div>
+                <div class="blockWithText">
+                    <h2>Password</h2>
+                        <input type="password" name="password" placeholder="********" required>
+                </div>
+                <br>
+                <button id="buttonSubmit">Log In</button>
+            <br>
         </div>
-        <div class="blockWithText">
-            <h2>Telephone</h2>
-            <input type="password"  placeholder="0977777777">
-        </div>
-        <div class="blockWithText">
-            <h2>Login</h2>
-            <input type="password"  placeholder="IAmLogin">
-        </div>
-        <div class="blockWithText">
-            <h2>Password</h2>
-            <input type="password"  placeholder="********">
+        <div id="block1">
+            <h1>Registration</h1>
+            <h3>Sign in for CRM</h3>
+            <div class="blockWithText">
+                <h2>Name</h2>
+                    <input type="text" name="companyName" placeholder="MyfirstCompany" required>
+            </div>
+            <div class="blockWithText">
+                <h2>Establishment date</h2>
+                    <input type="date" name="dateCreate" placeholder="20.08.2006" required>
+            </div>
+            <br>
+            <br>
         </div>
         <br>
-        <button id="buttonSubmit">Log In</button>
-    <br>
-</div>
-<div id="block1">
-        <h1>Registration</h1>
-        <h3>Sign in for CRM</h3>
-        <div class="blockWithText">
-            <h2>Name</h2>
-            <input type="text" placeholder="MyfirstCompany">
-        </div>
-        <div class="blockWithText">
-            <h2>Establishment date</h2>
-            <input type="date"  placeholder="20.08.2006">
-        </div>
         <br>
         <br>
-    </div>
-    <br>
-    <br>
-    <br>
     </form>
 <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
 </body>

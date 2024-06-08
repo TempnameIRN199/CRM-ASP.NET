@@ -32,7 +32,7 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
 
         public short? CompanyId { set; get; }
 
-        public short DirectorAcctLogPwdId { set; get; }
+        public short? DirectorAcctLogPwdId { set; get; }
 
         [ForeignKey(nameof(CompanyId))]
         public virtual Company Company { set; get; }
@@ -44,16 +44,17 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         {
         }
 
-        public Director(in string inSurname, in string inName, in string inPhone, in string inEmail,
-            in short inCompanyId, in short inDirectorAcctLogPwdId) : this(0, inSurname, inName, inPhone, inEmail, inCompanyId, inDirectorAcctLogPwdId)
+        public Director(in string inSurname, in string inName, in string inPatronymic, in string inPhone, in string inEmail,
+            in short? inCompanyId, in short? inDirectorAcctLogPwdId) : this(0, inSurname, inName, inPatronymic, inPhone, inEmail, inCompanyId, inDirectorAcctLogPwdId)
         { }
 
-        public Director(in short inId, in string inSurname, in string inName, in string inPhone, in string inEmail, 
-            in short inCompanyId, in short inDirectorAcctLogPwdId)
+        public Director(in short inId, in string inSurname, in string inName, in string inPatronymic, in string inPhone, in string inEmail,
+            in short? inCompanyId, in short? inDirectorAcctLogPwdId)
         {
             Id = inId;
             Surname = inSurname;
             Name = inName;
+            Patronymic = inPatronymic;
             Phone = inPhone;
             Email = inEmail;
             CompanyId = inCompanyId;

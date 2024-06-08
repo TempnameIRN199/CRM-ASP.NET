@@ -27,10 +27,10 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
         public DirectorAcctLogPwd()
         { }
 
-        public DirectorAcctLogPwd(in string inLogin, in string inPassword, in short inDirectorId) : this(0, inLogin, inPassword, inDirectorId)
+        public DirectorAcctLogPwd(in string inLogin, in string inPassword, in short? inDirectorId) : this(0, inLogin, inPassword, inDirectorId)
         { }
 
-        public DirectorAcctLogPwd(in short inId, in string inLogin, in string inPassword, in short inDirectorId)
+        public DirectorAcctLogPwd(in short inId, in string inLogin, in string inPassword, in short? inDirectorId)
         {
             Id = inId;
             Login = inLogin;

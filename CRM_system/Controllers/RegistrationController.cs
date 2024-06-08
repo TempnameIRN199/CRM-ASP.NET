@@ -1,83 +1,45 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CRM_system.Models.EntityDataModels.CrmSysModel.Entities;
+using CRM_system.Models.EntityDataModels.CrmSysModel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRM_system.Controllers
 {
     public class RegistrationController : Controller
     {
+        private readonly CrmSysContext _context;
+
+        public RegistrationController(CrmSysContext context)
+        {
+            _context = context;
+        }
+
         // GET: RegistrationController
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: RegistrationController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: RegistrationController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: RegistrationController/Create
+        // POST: RegistrationController/Edit/
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult Registration(string email, string phone, string fullname,
+            string login, string password, string companyName, string dateCreate)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            string[] fullnameArr = fullname.Split(' ');
+            string newSurname = fullnameArr[0];
+            string newName = fullnameArr[1];
+            string newPatronymic = fullnameArr[2];
 
-        // GET: RegistrationController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+            DirectorAcctLogPwd directorAcctLogPwd = new DirectorAcctLogPwd(login, password, null);
 
-        // POST: RegistrationController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            Company company = new Company(companyName, DateTime.Parse(dateCreate), null);
 
-        // GET: RegistrationController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
+            Director dir = new Director(newSurname, newName, newPatronymic, phone, email, null, null);
 
-        // POST: RegistrationController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            CrmSysContext.LinqQueries.AddEntityQueries.AddCompanyDirectorAcct(_context, company, dir, directorAcctLogPwd);
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

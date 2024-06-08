@@ -36,6 +36,9 @@
         var closeButton = document.querySelector('.close');
         var buttonInTable1 = document.querySelectorAll('.buttonInTable1');
         var buttonSubmit = document.getElementById('buttonSubmit');
+        var messagemodal = document.getElementById('messages-modal');
+        var messagemodalcontent = document.getElementById('modal-content-messages');
+
         if (a == 0) {
             buttonTheme.textContent = "☀";
             buttonTheme.style.backgroundColor = "whitesmoke";
@@ -45,6 +48,9 @@
             header.style.backgroundColor = "rgb(45, 45, 45)";
             body.style.color = "whitesmoke";
             sidebar.style.backgroundColor = "rgb(40, 40, 40)";
+            messagemodal.style.backgroundColor = "rgb(49, 49, 49)";
+            messagemodalcontent.style.backgroundColor = "rgb(49, 49, 49)";
+
             h2Elements.forEach(function (h2) {
                 h2.style.color = "whitesmoke";
             });
@@ -76,6 +82,8 @@
             header.style.backgroundColor = "rgb(179, 179, 179)";
             body.style.color = "rgb(41, 41, 41)";
             sidebar.style.backgroundColor = "rgb(157, 157, 157)";
+            messagemodal.style.backgroundColor = "#eeeeee";
+            messagemodalcontent.style.backgroundColor = "#eeeeee";
             h2Elements.forEach(function (h2) {
                 h2.style.color = "rgb(41, 41, 41)";
             });
@@ -102,6 +110,24 @@
     function updateValue(input) {
         input.setAttribute('value', input.value);
     }
+    document.addEventListener('DOMContentLoaded', function () {
+        var modalMessages = document.getElementById("messages-modal");
+        var btnMessages = document.querySelector(".custom-button");
+        var spanMessages = document.getElementsByClassName("close-messages")[0];
+        btnMessages.onclick = function () {
+            modalMessages.style.display = "block";
+        }
+
+        spanMessages.onclick = function () {
+            modalMessages.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modalMessages) {
+                modalMessages.style.display = "none";
+            }
+        }
+    });
 
 </script>
 <body id="body1">
@@ -182,5 +208,36 @@
             <input type="text" id="password" name="password" oninput="updateValue(this)" placeholder="********" required><br>
             <button type="submit" id="buttonSubmit">Add Manager</button>
         </form>
+    </div>
+</div>
+<div id="messages-modal" class="messages-modal">
+    <div id="modal-content-messages" class="modal-content-messages">
+        <span class="close-messages">&times;</span>
+        <div class="table-container-messages">
+            <table>
+                <tbody>
+                    <tr>
+                        <h1 class="dealname">Client1</h1>
+                        Message1
+                        <hr>
+                    </tr>
+                    <tr>
+                        <h1 class="dealname">Client2</h1>
+                        Message2
+                        <hr>
+                    </tr>
+                    <tr>
+                        <h1 class="dealname">Client3</h1>
+                        Message3
+                        <hr>
+                    </tr>
+                    <tr>
+                        <h1 class="dealname">Client4</h1>
+                        Message4
+                        <hr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

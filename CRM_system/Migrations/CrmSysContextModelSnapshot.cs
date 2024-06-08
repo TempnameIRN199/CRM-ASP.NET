@@ -207,7 +207,7 @@ namespace CRM_system.Migrations
                     b.Property<short?>("CompanyId")
                         .HasColumnType("smallint");
 
-                    b.Property<short>("DirectorAcctLogPwdId")
+                    b.Property<short?>("DirectorAcctLogPwdId")
                         .HasColumnType("smallint");
 
                     b.Property<string>("Email")
@@ -240,7 +240,8 @@ namespace CRM_system.Migrations
                         .HasFilter("[CompanyId] IS NOT NULL");
 
                     b.HasIndex("DirectorAcctLogPwdId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[DirectorAcctLogPwdId] IS NOT NULL");
 
                     b.ToTable("TBL_Directors", "dbo");
                 });
@@ -399,9 +400,7 @@ namespace CRM_system.Migrations
 
                     b.HasOne("CRM_system.Models.EntityDataModels.CrmSysModel.Entities.DirectorAcctLogPwd", "DirectorAcctLogPwd")
                         .WithOne("Director")
-                        .HasForeignKey("CRM_system.Models.EntityDataModels.CrmSysModel.Entities.Director", "DirectorAcctLogPwdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CRM_system.Models.EntityDataModels.CrmSysModel.Entities.Director", "DirectorAcctLogPwdId");
 
                     b.Navigation("Company");
 

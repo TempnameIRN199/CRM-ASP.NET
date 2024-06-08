@@ -65,72 +65,21 @@ namespace CRM_system.Controllers
             return NotFound(new { message = "User not found" });
         }
 
-        //// GET: StatisticsController/Details/5
-        public IActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: StatisticsController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: StatisticsController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public IActionResult DIR(string action)
         {
-            try
+            if (action == "Managers")
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Managers");
             }
-            catch
+            else if (action == "Deals")
             {
-                return View();
+                return RedirectToAction("Index", "Deals");
             }
-        }
-
-        // GET: StatisticsController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: StatisticsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
+            else
             {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: StatisticsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: StatisticsController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
+                // Handle other cases or return a default action
+                return RedirectToAction("Index", "Home");
             }
         }
     }

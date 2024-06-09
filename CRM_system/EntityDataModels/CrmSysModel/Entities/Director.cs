@@ -2,11 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
+namespace CRM_system.EntityDataModels.CrmSysModel.Entities
 {
     [Table("TBL_Directors", Schema = "dbo")]
     public class Director
-    { 
+    {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public short Id { set; get; }
@@ -48,7 +48,7 @@ namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
             in short inCompanyId, in short inDirectorAcctLogPwdId) : this(0, inSurname, inName, inPhone, inEmail, inCompanyId, inDirectorAcctLogPwdId)
         { }
 
-        public Director(in short inId, in string inSurname, in string inName, in string inPhone, in string inEmail, 
+        public Director(in short inId, in string inSurname, in string inName, in string inPhone, in string inEmail,
             in short inCompanyId, in short inDirectorAcctLogPwdId)
         {
             Id = inId;

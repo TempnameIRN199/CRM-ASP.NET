@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using CRM_system.Models.EntityDataModels.CrmSysModel;
-using CRM_system.Models.EntityDataModels.CrmSysModel.Entities;
 using System.Net;
+using CRM_system.EntityDataModels.CrmSysModel.Entities;
 
 namespace CRM_system.Controllers
 {

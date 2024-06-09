@@ -1,5 +1,5 @@
 ﻿﻿
-@model List<CRM_system.Models.EntityDataModels.CrmSysModel.Entities.Deal>
+@model List<CRM_system.EntityDataModels.CrmSysModel.Entities.Deal>
 
 <script>
      var a = 0;
@@ -189,19 +189,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Vershinin</td>
-                            <td>Illia</td>
-                            <td>Oleksandrovich</td>
-                            <td>+380 67 293 98 85</td>
-                            <td>example@gmail.com</td>
-                            <td>10000$</td>
-                            <!-- тут крч $ добавлять после считывания с таблицы -->
-                            <td>авт.дтл.дыфптлждыфваоваоыватлждатлд птлждодаод</td>
-                            <td><button class="buttonInTable">More</button></td>
-                            <td><button class="buttonInTable1">✔</button></td>
-                            <td><button class="buttonInTable1">&#x2718;</button></td>
-                        </tr>
+                        @foreach (var deal in Model)
+                        {
+                            <tr>
+                                <td>@deal.Manager.Surname</td>
+                                <td>@deal.Manager.Name</td>
+                                <td>@deal.Manager.Patronymic</td>
+                                <th>@deal.Manager.Phone</th>
+                                <th>@deal.Manager.Email</th>
+                                <th>@deal.Amount</th>
+                                <th>@deal.Description</th>
+                                <th>Link</th>
+                                <th>Accept</th>
+                                <th>Reject</th>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

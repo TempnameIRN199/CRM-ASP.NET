@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CRM_system.Models.EntityDataModels.CrmSysModel.Entities
+namespace CRM_system.EntityDataModels.CrmSysModel.Entities
 {
     [Table("TBL_Managers", Schema = "dbo")]
     public class Manager

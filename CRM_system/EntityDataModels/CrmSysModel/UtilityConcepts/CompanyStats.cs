@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CRM_system.Models.EntityDataModels.CrmSysModel.UtilityConcepts
+namespace CRM_system.EntityDataModels.CrmSysModel.UtilityConcepts
 {
     public sealed class CompanyStats
     {

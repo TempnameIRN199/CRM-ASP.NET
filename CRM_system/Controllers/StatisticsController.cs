@@ -1,5 +1,4 @@
-﻿using CRM_system.Models.EntityDataModels.CrmSysModel.Entities;
-using CRM_system.Models.EntityDataModels.CrmSysModel;
+﻿using CRM_system.Models.EntityDataModels.CrmSysModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

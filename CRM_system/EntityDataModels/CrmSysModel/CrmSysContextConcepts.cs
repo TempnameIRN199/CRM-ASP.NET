@@ -1,5 +1,5 @@
 ﻿using System;
-using CRM_system.Models.EntityDataModels.CrmSysModel.Entities;
+using CRM_system.EntityDataModels.CrmSysModel.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 

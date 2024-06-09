@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace CRM_system.Models.EntityDataModels.CrmSysModel
 {
-    using Entities;
-    using UtilityConcepts;
+    using CRM_system.EntityDataModels.CrmSysModel.Entities;
+    using CRM_system.EntityDataModels.CrmSysModel.UtilityConcepts;
 
     public partial class CrmSysContext : DbContext
     {

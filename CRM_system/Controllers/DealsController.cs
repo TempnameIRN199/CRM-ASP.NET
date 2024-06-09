@@ -15,23 +15,15 @@ namespace CRM_system.Controllers
 			_context = context;
 		}
 
-		// GET: Deals/Create
-		public IActionResult Create()
+		[HttpGet]
+		public async Task<IActionResult> Index()
 		{
-			return View();
+			var deals = await _context.Deals
+				.Include(d => d.Client)
+				.Include(d => d.Manager)
+				.Include(d => d.Manager.ManagerAcctLogPwd)
+				.Include(d => d.DealStatus).ToListAsync();
+			return View(deals);
 		}
-
-		// POST: Deals/Create
-		[HttpPost]
-        public async Task<IActionResult> Index()
-        {
-            var deals = await _context.Deals
-                .Include(d => d.Client)     
-                .Include(d => d.Manager)     
-                .Include(d => d.DealStatus)  
-                .ToListAsync();
-
-            return View(deals);
-        }
     }
 }

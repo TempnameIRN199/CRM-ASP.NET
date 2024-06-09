@@ -1,149 +1,163 @@
-﻿﻿
-@model List<CRM_system.EntityDataModels.CrmSysModel.Entities.Deal>
+﻿@model List<CRM_system.EntityDataModels.CrmSysModel.Entities.Deal>
 
 <script>
-     var a = 0;
-     document.addEventListener('DOMContentLoaded', function () {
-         const newManagerBtn = document.querySelector('.new-manager-btn');
-         const managerModal = document.getElementById('manager-modal');
-         const managerModalForm = document.getElementById('manager-modal-form');
-         const managerModalCloseButton = document.querySelector('#manager-modal .close');
-         newManagerBtn.addEventListener('click', function () {
-             managerModal.style.display = 'block';
-             managerModalForm.reset();
-             managerModalForm.dataset.mode = 'add';
-         });
-         managerModalCloseButton.addEventListener('click', function () { managerModal.style.display = 'none'; });
-         window.addEventListener('click', function (event) {
-             if (event.target === managerModal) {
-                 managerModal.style.display = 'none';
-             }
-         });
-         managerModalForm.addEventListener('submit', function (event) {
-             managerModal.style.display = 'none';
-             managerModalForm.reset();
-         });
-     });
+    var a = 0;
+    document.addEventListener('DOMContentLoaded', function () {
+        const newManagerBtn = document.querySelector('.new-manager-btn');
+        const managerModal = document.getElementById('manager-modal');
+        const managerModalForm = document.getElementById('manager-modal-form');
+        const managerModalCloseButton = document.querySelector('#manager-modal .close');
+        newManagerBtn.addEventListener('click', function () {
+            managerModal.style.display = 'block';
+            managerModalForm.reset();
+            managerModalForm.dataset.mode = 'add';
+        });
+        managerModalCloseButton.addEventListener('click', function () { managerModal.style.display = 'none'; });
+        window.addEventListener('click', function (event) {
+            if (event.target === managerModal) {
+                managerModal.style.display = 'none';
+            }
+        });
+        managerModalForm.addEventListener('submit', function (event) {
+            managerModal.style.display = 'none';
+            managerModalForm.reset();
+        });
+    });
 
-     function ChangeTheme() {
-         var buttonTheme = document.getElementById('buttonTheme');
-         var content = document.getElementById('content');
-         var header = document.getElementById('header');
-         var body = document.getElementById('body1');
-         var sidebar = document.getElementById('sidebar');
-         var h2Elements = document.querySelectorAll('h2');
-         var h1Elements = document.querySelectorAll('h1');
-         var aElements = document.querySelectorAll('a');
-         var customButtons = document.querySelectorAll('.custom-button');
-         var modalContent = document.querySelector('.modal-content');
-         var closeButton = document.querySelector('.close');
-         var buttonInTable = document.querySelectorAll('.buttonInTable');
-         var buttonInTable1 = document.querySelectorAll('.buttonInTable1');
-         var buttonSubmit = document.getElementById('buttonSubmit');
-         var messagemodal = document.getElementById('messages-modal');
-         var messagemodalcontent = document.getElementById('modal-content-messages');
+    function ChangeTheme() 
+    {
+        var buttonTheme = document.getElementById('buttonTheme');
+        var content = document.getElementById('content');
+        var header = document.getElementById('header');
+        var body = document.getElementById('body1');
+        var sidebar = document.getElementById('sidebar');
+        var h2Elements = document.querySelectorAll('h2');
+        var h1Elements = document.querySelectorAll('h1');
+        var aElements = document.querySelectorAll('.sidebar_button');
+        var customButtons = document.querySelectorAll('.custom-button');
+        var modalContent = document.querySelector('.modal-content');
+        var closeButton = document.querySelector('.close');
+        var buttonInTable = document.querySelectorAll('.buttonInTable');
+        var buttonInTable1 = document.querySelectorAll('.buttonInTable1');
+        var buttonSubmit = document.getElementById('buttonSubmit');
+        var messagemodal = document.getElementById('messages-modal');
+        var messagemodalcontent = document.getElementById('modal-content-messages');
 
 
 
-         if (a == 0) {
-             buttonTheme.textContent = "☀";
-             buttonTheme.style.backgroundColor = "whitesmoke";
-             buttonTheme.style.borderColor = "whitesmoke";
-             buttonTheme.style.color = "rgb(41, 41, 41)";
-             content.style.backgroundColor = "rgb(53, 53, 53)";
-             header.style.backgroundColor = "rgb(45, 45, 45)";
-             body.style.color = "whitesmoke";
-             sidebar.style.backgroundColor = "rgb(40, 40, 40)";
-             messagemodal.style.backgroundColor = "rgb(49, 49, 49)";
-             messagemodalcontent.style.backgroundColor = "rgb(49, 49, 49)";
+        if (a == 0) {
+            buttonTheme.textContent = "☀";
+            buttonTheme.style.backgroundColor = "whitesmoke";
+            buttonTheme.style.borderColor = "whitesmoke";
+            buttonTheme.style.color = "rgb(41, 41, 41)";
+            content.style.backgroundColor = "rgb(53, 53, 53)";
+            header.style.backgroundColor = "rgb(45, 45, 45)";
+            body.style.color = "whitesmoke";
+            sidebar.style.backgroundColor = "rgb(40, 40, 40)";
+            messagemodal.style.backgroundColor = "rgb(49, 49, 49)";
+            messagemodalcontent.style.backgroundColor = "rgb(49, 49, 49)";
 
-             h2Elements.forEach(function (h2) {
-                 h2.style.color = "whitesmoke";
-             });
-             h1Elements.forEach(function (h1) {
-                 h1.style.color = "whitesmoke";
-             });
-             aElements.forEach(function (a) {
-                 a.style.color = "whitesmoke";
-             });
-             customButtons.forEach(function (a) {
-                 a.style.color = "whitesmoke";
-             });
-             buttonInTable.forEach(function (button) {
-                 button.style.color = "whitesmoke";
-             });
-             buttonInTable1.forEach(function (button) {
-                 button.style.color = "whitesmoke";
-             });
-             modalContent.style.backgroundColor = "rgb(45, 45, 45)";
-             closeButton.style.color = "whitesmoke";
-             buttonSubmit.style.backgroundColor = "whitesmoke";
-             buttonSubmit.style.borderColor = "whitesmoke";
-             buttonSubmit.style.color = "rgb(41, 41, 41)";
-             plusbutton.style.borderColor = "whitesmoke";
-             plusbutton.style.color = "whitesmoke";
-             a = 1;
-         }
-         else {
-             buttonTheme.textContent = "☾";
-             buttonTheme.style.backgroundColor = "rgb(41, 41, 41)";
-             buttonTheme.style.borderColor = "rgb(41, 41, 41)";
-             buttonTheme.style.color = "whitesmoke";
-             content.style.backgroundColor = "#d3d3d3";
-             header.style.backgroundColor = "rgb(179, 179, 179)";
-             plusbutton.style.borderColor = "rgb(41, 41, 41)";
-             plusbutton.style.color = "rgb(41, 41, 41)";
-             body.style.color = "rgb(41, 41, 41)";
-             sidebar.style.backgroundColor = "rgb(157, 157, 157)";
-             messagemodal.style.backgroundColor = "#eeeeee";
-             messagemodalcontent.style.backgroundColor = "#eeeeee";
-             h2Elements.forEach(function (h2) {
-                 h2.style.color = "rgb(41, 41, 41)";
-             });
-             h1Elements.forEach(function (h1) {
-                 h1.style.color = "rgb(41, 41, 41)";
-             });
-             aElements.forEach(function (a) {
-                 a.style.color = "rgb(41, 41, 41)";
-             });
-             customButtons.forEach(function (a) {
-                 a.style.color = "rgb(41, 41, 41)";
-             });
-             buttonInTable.forEach(function (button) {
-                 button.style.color = "rgb(41, 41, 41)";
-             });
-             buttonInTable1.forEach(function (button) {
-                 button.style.color = "rgb(41, 41, 41)";
-             });
-             modalContent.style.backgroundColor = "#d3d3d3";
-             closeButton.style.color = "rgb(41, 41, 41)";
-             buttonSubmit.style.backgroundColor = "rgb(41, 41, 41)";
-             buttonSubmit.style.borderColor = "rgb(41, 41, 41)";
-             buttonSubmit.style.color = "whitesmoke";
-             a = 0;
-         }
-     }
-     function updateValue(input) {
-         input.setAttribute('value', input.value);
-     }
-     document.addEventListener('DOMContentLoaded', function () {
-         var modalMessages = document.getElementById("messages-modal");
-         var btnMessages = document.querySelector(".custom-button");
-         var spanMessages = document.getElementsByClassName("close-messages")[0];
-         btnMessages.onclick = function () {
-             modalMessages.style.display = "block";
-         }
+            h2Elements.forEach(function (h2) {
+                h2.style.color = "whitesmoke";
+            });
+            h1Elements.forEach(function (h1) {
+                h1.style.color = "whitesmoke";
+            });
+            aElements.forEach(function (button) {
+                button.style.color = "whitesmoke";
+                button.style.backgroundColor = "rgb(40, 40, 40)";
+                button.addEventListener('mouseover', function () {
+                    button.style.backgroundColor = '#666';
+                });
+                button.addEventListener('mouseout', function () {
+                    button.style.backgroundColor = 'rgb(40, 40, 40)';
+                });
+            });
+            customButtons.forEach(function (a) {
+                a.style.color = "whitesmoke";
+            });
+            buttonInTable.forEach(function (button) {
+                button.style.color = "whitesmoke";
+            });
+            buttonInTable1.forEach(function (button) {
+                button.style.color = "whitesmoke";
+            });
+            modalContent.style.backgroundColor = "rgb(45, 45, 45)";
+            closeButton.style.color = "whitesmoke";
+            buttonSubmit.style.backgroundColor = "whitesmoke";
+            buttonSubmit.style.borderColor = "whitesmoke";
+            buttonSubmit.style.color = "rgb(41, 41, 41)";
+            plusbutton.style.borderColor = "whitesmoke";
+            plusbutton.style.color = "whitesmoke";
+            a = 1;
+        }
+        else {
+            buttonTheme.textContent = "☾";
+            buttonTheme.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonTheme.style.borderColor = "rgb(41, 41, 41)";
+            buttonTheme.style.color = "whitesmoke";
+            content.style.backgroundColor = "#d3d3d3";
+            header.style.backgroundColor = "rgb(179, 179, 179)";
+            plusbutton.style.borderColor = "rgb(41, 41, 41)";
+            plusbutton.style.color = "rgb(41, 41, 41)";
+            body.style.color = "rgb(41, 41, 41)";
+            sidebar.style.backgroundColor = "rgb(157, 157, 157)";
+            messagemodal.style.backgroundColor = "#eeeeee";
+            messagemodalcontent.style.backgroundColor = "#eeeeee";
+            h2Elements.forEach(function (h2) {
+                h2.style.color = "rgb(41, 41, 41)";
+            });
+            h1Elements.forEach(function (h1) {
+                h1.style.color = "rgb(41, 41, 41)";
+            });
+            aElements.forEach(function (button) {
+                button.style.color = "rgb(41, 41, 41)";
+                button.style.backgroundColor = "rgb(157, 157, 157)";
+                button.addEventListener('mouseover', function () {
+                    button.style.backgroundColor = '#666';
+                });
+                button.addEventListener('mouseout', function () {
+                    button.style.backgroundColor = 'rgb(157, 157, 157)';
+                });
+            });
+            customButtons.forEach(function (a) {
+                a.style.color = "rgb(41, 41, 41)";
+            });
+            buttonInTable.forEach(function (button) {
+                button.style.color = "rgb(41, 41, 41)";
+            });
+            buttonInTable1.forEach(function (button) {
+                button.style.color = "rgb(41, 41, 41)";
+            });
+            modalContent.style.backgroundColor = "#d3d3d3";
+            closeButton.style.color = "rgb(41, 41, 41)";
+            buttonSubmit.style.backgroundColor = "rgb(41, 41, 41)";
+            buttonSubmit.style.borderColor = "rgb(41, 41, 41)";
+            buttonSubmit.style.color = "whitesmoke";
+            a = 0;
+        }
+    }
+    function updateValue(input) {
+        input.setAttribute('value', input.value);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+        var modalMessages = document.getElementById("messages-modal");
+        var btnMessages = document.querySelector(".custom-button");
+        var spanMessages = document.getElementsByClassName("close-messages")[0];
+        btnMessages.onclick = function () {
+            modalMessages.style.display = "block";
+        }
 
-         spanMessages.onclick = function () {
-             modalMessages.style.display = "none";
-         }
+        spanMessages.onclick = function () {
+            modalMessages.style.display = "none";
+        }
 
-         window.onclick = function (event) {
-             if (event.target == modalMessages) {
-                 modalMessages.style.display = "none";
-             }
-         }
-     });
+        window.onclick = function (event) {
+            if (event.target == modalMessages) {
+                modalMessages.style.display = "none";
+            }
+        }
+    });
 
 </script>
 <body id="body1">
@@ -161,7 +175,7 @@
             <div class="sidebar">
                 <button class="sidebar_button" type="submit" name="action" value="Managers">Managers</button>
                 <button class="sidebar_button" type="submit" name="action" value="Deals">Deals</button>
-            </div> 
+            </div>
         </form>
         <div id="content" class="content">
             <div class="table-header">

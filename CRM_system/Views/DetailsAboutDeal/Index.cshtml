@@ -10,6 +10,24 @@
             dateInput.style.visibility = 'hidden';
         }
     }
+    document.addEventListener('DOMContentLoaded', function () {
+        var modalMessages = document.getElementById("messages-modal");
+        var btnMessages = document.querySelector(".custom-button");
+        var spanMessages = document.getElementsByClassName("close-messages")[0];
+        btnMessages.onclick = function () {
+            modalMessages.style.display = "block";
+        }
+
+        spanMessages.onclick = function () {
+            modalMessages.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modalMessages) {
+                modalMessages.style.display = "none";
+            }
+        }
+    });
     function ChangeTheme() {
         var buttonTheme = document.getElementById('buttonTheme');
         var content = document.getElementById('content3');
@@ -20,10 +38,14 @@
         var sidebar = document.getElementById('sidebar');
         var h2Elements = document.querySelectorAll('h2');
         var h1Elements = document.querySelectorAll('h1');
-        var aElements = document.querySelectorAll('a');
+        var aElements = document.querySelectorAll('.sidebar_button');
         var customButtons = document.querySelectorAll('.custom-button');
+        var messagemodal = document.getElementById('messages-modal');
+        var messagemodalcontent = document.getElementById('modal-content-messages');
         if (a == 0) {
             buttonTheme.textContent = "☀";
+            messagemodal.style.backgroundColor = "rgb(49, 49, 49)";
+            messagemodalcontent.style.backgroundColor = "rgb(49, 49, 49)";
             buttonTheme.style.backgroundColor = "whitesmoke";
             buttonTheme.style.borderColor = "whitesmoke";
             buttonTheme.style.color = "rgb(41, 41, 41)";
@@ -40,8 +62,15 @@
             h1Elements.forEach(function (h1) {
                 h1.style.color = "whitesmoke";
             });
-            aElements.forEach(function (a) {
-                a.style.color = "whitesmoke";
+            aElements.forEach(function (button) {
+                button.style.color = "whitesmoke";
+                button.style.backgroundColor = "rgb(40, 40, 40)";
+                button.addEventListener('mouseover', function () {
+                    button.style.backgroundColor = '#666';
+                });
+                button.addEventListener('mouseout', function () {
+                    button.style.backgroundColor = 'rgb(40, 40, 40)';
+                });
             });
             customButtons.forEach(function (a) {
                 a.style.color = "whitesmoke";
@@ -50,6 +79,8 @@
         }
         else {
             buttonTheme.textContent = "☾";
+            messagemodal.style.backgroundColor = "#eeeeee";
+            messagemodalcontent.style.backgroundColor = "#eeeeee";
             buttonTheme.style.backgroundColor = "rgb(41, 41, 41)";
             buttonTheme.style.borderColor = "rgb(41, 41, 41)";
             buttonTheme.style.color = "whitesmoke";
@@ -66,8 +97,15 @@
             h1Elements.forEach(function (h1) {
                 h1.style.color = "rgb(41, 41, 41)";
             });
-            aElements.forEach(function (a) {
-                a.style.color = "rgb(41, 41, 41)";
+            aElements.forEach(function (button) {
+                button.style.color = "rgb(41, 41, 41)";
+                button.style.backgroundColor = "rgb(157, 157, 157)";
+                button.addEventListener('mouseover', function () {
+                    button.style.backgroundColor = '#666';
+                });
+                button.addEventListener('mouseout', function () {
+                    button.style.backgroundColor = 'rgb(157, 157, 157)';
+                });
             });
             customButtons.forEach(function (a) {
                 a.style.color = "rgb(41, 41, 41)";
@@ -87,15 +125,12 @@
         </div>
     </div>
     <div class="main">
-        <div id="sidebar" class="sidebar">
-            <a href="#">First</a>
-            <a href="#">Second</a>
-            <a href="#">Third</a>
-            <a href="#">Fourth</a>
-            <a href="#">Fifth</a>
-            <a href="#">Sixth</a>
-            <a href="#">Seventh</a>
-        </div>
+        <form asp-action="DIR" method="post" class="sidebar" id="sidebar">
+            <div class="sidebar">
+                <button class="sidebar_button" type="submit" name="action" value="Managers">Managers</button>
+                <button class="sidebar_button" type="submit" name="action" value="Deals">Deals</button>
+            </div>
+        </form>
         <div id="content3" class="content3">
             <div class="user-info1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
@@ -178,3 +213,34 @@
     </div>
     <button id="buttonTheme" class="buttonTheme" onclick="ChangeTheme()">☾</button>
 </body>
+<div id="messages-modal" class="messages-modal">
+    <div id="modal-content-messages" class="modal-content-messages">
+        <span class="close-messages">&times;</span>
+        <div class="table-container-messages">
+            <table>
+                <tbody>
+                    <tr>
+                        <h1 class="dealname">Client1</h1>
+                        Message1
+                        <hr>
+                    </tr>
+                    <tr>
+                        <h1 class="dealname">Client2</h1>
+                        Message2
+                        <hr>
+                    </tr>
+                    <tr>
+                        <h1 class="dealname">Client3</h1>
+                        Message3
+                        <hr>
+                    </tr>
+                    <tr>
+                        <h1 class="dealname">Client4</h1>
+                        Message4
+                        <hr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

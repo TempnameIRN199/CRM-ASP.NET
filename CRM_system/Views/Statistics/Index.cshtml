@@ -1,5 +1,9 @@
-﻿@model CRM_system.Controllers.StatisticViewModel
-
+﻿
+@model List<CRM_system.Models.EntityDataModels.CrmSysModel.Entities.Deal>
+@foreach (var deal in Model)
+{
+    @deal.Date
+}
 <head>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>

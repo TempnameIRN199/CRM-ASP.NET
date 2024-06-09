@@ -1,25 +1,22 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CRM_system.Models.EntityDataModels.CrmSysModel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CRM_system.Controllers
 {
     public class DealsController : Controller
     {
+        public readonly CrmSysContext crmSysContext;
+
+        public DealsController(CrmSysContext _crmSysContext)
+        {
+            crmSysContext = _crmSysContext;
+        }
+
         // GET: DealsController
         public ActionResult Index()
         {
-            return View();
-        }
 
-        // GET: DealsController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: DealsController/Create
-        public ActionResult Create()
-        {
             return View();
         }
 

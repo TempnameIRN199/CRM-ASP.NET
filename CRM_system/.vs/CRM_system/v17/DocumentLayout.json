@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\views\\managers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\managers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\views\\detailsaboutdeal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\detailsaboutdeal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\views\\deals\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\deals\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\users\\vitya\\onedrive\\documents\\github\\crm-asp.net\\crm_system\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +46,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Views\\Statistics\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Statistics\\Index.cshtml",
@@ -51,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "StatisticsController.cs",
               "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\StatisticsController.cs",
               "RelativeDocumentMoniker": "Controllers\\StatisticsController.cs",
@@ -65,6 +73,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DealsController.cs",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\DealsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DealsController.cs",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\DealsController.cs",
+              "RelativeToolTip": "Controllers\\DealsController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T18:53:47.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Views\\Managers\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Managers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Views\\Managers\\Index.cshtml",
+              "RelativeToolTip": "Views\\Managers\\Index.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-09T18:49:52.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Views\\DetailsAboutDeal\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DetailsAboutDeal\\Index.cshtml",
@@ -76,19 +108,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Views\\Deals\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Deals\\Index.cshtml",
               "ToolTip": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Views\\Deals\\Index.cshtml",
               "RelativeToolTip": "Views\\Deals\\Index.cshtml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-09T18:31:22.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T18:31:22.41Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -100,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\vitya\\OneDrive\\Documents\\GitHub\\CRM-ASP.NET\\CRM_system\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",

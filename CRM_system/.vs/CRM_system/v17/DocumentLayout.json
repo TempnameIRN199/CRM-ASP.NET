@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\views\\managers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\managers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\views\\detailsaboutdeal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\detailsaboutdeal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\controllers\\managerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\managerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\views\\deals\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\deals\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\statistics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\views\\detailsaboutdeal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:views\\detailsaboutdeal\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,20 +43,12 @@
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\controllers\\managerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\managerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\entitydatamodels\\crmsysmodel\\crmsyscontextlinqqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:entitydatamodels\\crmsysmodel\\crmsyscontextlinqqueries.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|solutionrelative:controllers\\dealscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B7008197-C953-498F-83D9-06C1BADB57E6}|CRM_system.csproj|c:\\adsdadsdadas\\comand\\crm-asp.net\\crm_system\\entitydatamodels\\crmsysmodel\\entities\\deal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -96,11 +96,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 198,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -109,12 +109,11 @@
               "ViewState": "AQIAACEAAAAAAAAAAAAAADEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-31T19:13:32.563Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -123,21 +122,7 @@
               "ViewState": "AQIAABAAAAAAAAAAAAAgwCcAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T19:13:34.463Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Registration\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Registration\\Index.cshtml",
-              "ToolTip": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Registration\\Index.cshtml",
-              "RelativeToolTip": "Views\\Registration\\Index.cshtml",
-              "ViewState": "AQIAADsAAAAAAAAAAAAcwEgAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-09T19:22:22.182Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -153,28 +138,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Registration\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Registration\\Index.cshtml",
+              "ToolTip": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Registration\\Index.cshtml",
+              "RelativeToolTip": "Views\\Registration\\Index.cshtml",
+              "ViewState": "AQIAADsAAAAAAAAAAAAcwEgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-09T19:22:22.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Managers\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Managers\\Index.cshtml",
               "ToolTip": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Managers\\Index.cshtml",
               "RelativeToolTip": "Views\\Managers\\Index.cshtml",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAAAF8AAAA6AAAA",
+              "ViewState": "AQIAAJkAAAAAAAAAAAAMwJwAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-09T18:06:26.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "DealsController.cs",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Controllers\\DealsController.cs",
               "RelativeDocumentMoniker": "Controllers\\DealsController.cs",
               "ToolTip": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Controllers\\DealsController.cs",
               "RelativeToolTip": "Controllers\\DealsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T10:52:00.695Z"
+              "WhenOpened": "2024-06-04T10:52:00.695Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -190,13 +188,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Deals\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Deals\\Index.cshtml",
               "ToolTip": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Deals\\Index.cshtml",
               "RelativeToolTip": "Views\\Deals\\Index.cshtml",
-              "ViewState": "AQIAAKQAAAAAAAAAAADwv8sAAAAbAAAA",
+              "ViewState": "AQIAALEAAAAAAAAAAAAEwMoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-04T10:57:16.766Z",
               "EditorCaption": ""
@@ -215,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\DetailsAboutDeal\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DetailsAboutDeal\\Index.cshtml",
@@ -223,12 +221,11 @@
               "RelativeToolTip": "Views\\DetailsAboutDeal\\Index.cshtml",
               "ViewState": "AQIAADQAAAAAAAAAAAASwEoAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-03T14:06:45.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T14:06:45.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Views\\Statistics\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Statistics\\Index.cshtml",
@@ -241,20 +238,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "ManagersController.cs",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Controllers\\ManagersController.cs",
               "RelativeDocumentMoniker": "Controllers\\ManagersController.cs",
               "ToolTip": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Controllers\\ManagersController.cs",
               "RelativeToolTip": "Controllers\\ManagersController.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAUwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T17:24:11.83Z",
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "StatisticsController.cs",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\Controllers\\StatisticsController.cs",
               "RelativeDocumentMoniker": "Controllers\\StatisticsController.cs",
@@ -262,8 +263,7 @@
               "RelativeToolTip": "Controllers\\StatisticsController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAA4wB0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T17:24:17.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-09T17:24:17.468Z"
             },
             {
               "$type": "Document",
@@ -279,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CrmSysContextLinqQueries.cs",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\EntityDataModels\\CrmSysModel\\CrmSysContextLinqQueries.cs",
               "RelativeDocumentMoniker": "EntityDataModels\\CrmSysModel\\CrmSysContextLinqQueries.cs",
@@ -291,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "site.css",
               "DocumentMoniker": "C:\\adsdadsdadas\\comand\\CRM-ASP.NET\\CRM_system\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -300,10 +300,6 @@
               "ViewState": "AQIAAPUBAAAAAAAAAAAQwAsCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-06-09T19:02:51.287Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",

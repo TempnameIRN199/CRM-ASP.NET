@@ -1,4 +1,7 @@
-﻿<script>
+﻿
+@model List<CRM_system.EntityDataModels.CrmSysModel.Entities.Manager>
+
+<script>
     var a = 0;
     document.addEventListener('DOMContentLoaded', function () {
         const newManagerBtn = document.querySelector('.new-manager-btn');
@@ -180,16 +183,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Vershinin</td>
-                            <td>Illia</td>
-                            <td>Oleksandrovich</td>
-                            <td>+380 67 293 98 85</td>
-                            <td>example@gmail.com</td>
-                            <td>versil</td>
-                            <td>qwerty123</td>
-                            <td><button class="buttonInTable1">&#x2718;</button></td>
-                        </tr>
+                        @foreach (var manager in Model)
+                        {
+                            <tr>
+                                <td>@manager.Surname</td>
+                                <td>@manager.Name</td>
+                                <td>@manager.Patronymic</td>
+                                <td>@manager.Phone</td>
+                                <td>@manager.Email</td>
+                                <td>@manager.ManagerAcctLogPwd.Login</td>
+                                <td>@manager.ManagerAcctLogPwd.Password</td>
+                                <td><button class="buttonInTable1">&#x2718;</button></td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>

@@ -1,83 +1,18 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CRM_system.Models.EntityDataModels.CrmSysModel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRM_system.Controllers
 {
     public class DetailsAboutDealController : Controller
     {
-        // GET: DetailsAboutDealController
-        public ActionResult Index()
-        {
-            return View();
-        }
 
-        // GET: DetailsAboutDealController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
+        private readonly CrmSysContext _context;
 
-        // GET: DetailsAboutDealController/Create
-        public ActionResult Create()
+        public DetailsAboutDealController(CrmSysContext context)
         {
-            return View();
-        }
-
-        // POST: DetailsAboutDealController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: DetailsAboutDealController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: DetailsAboutDealController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: DetailsAboutDealController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: DetailsAboutDealController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _context = context;
         }
     }
 }

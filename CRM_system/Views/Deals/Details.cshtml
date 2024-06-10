@@ -1,4 +1,6 @@
-﻿<script>
+﻿@model CRM_system.EntityDataModels.CrmSysModel.Entities.Deal
+
+<script>
     var a = 0;
     function toggleDateInput() {
         var recordTypeSelect = document.getElementById('record-type');
@@ -139,35 +141,33 @@
             <br>
             <div class="user-info1">
                 <span class="user-name">Phone</span>
-                <span class="user-name">00000000000</span>
+                <span class="user-name">@Model.Client.Phone</span>
             </div>
             <br>
             <div class="user-info1">
                 <span class="user-name">Email</span>
-                <span class="user-name">
-                    taraskutuz@gmail.com
-                </span>
+                <span class="user-name">@Model.Client.Email</span>
             </div>
             <br>
             <div class="user-info1">
                 <span class="user-name">Budget</span>
-                <span class="user-name">10000$</span>
+                <span class="user-name">@Model.Amount</span>
             </div>
             <br>
             <div class="user-info1">
                 <span class="user-name">num of notations</span>
-                <span class="user-name">2</span>
+                <span class="user-name">@Model.Client.ClientNotations.Count</span>
             </div>
             <br>
             <div class="user-info1">
                 <span class="user-name">num of events</span>
-                <span class="user-name">2</span>
+                <span class="user-name">@Model.DealEvents.Count</span>
             </div>
             <br>
             <span class="user-name">Description</span>
             <br>
             <div>
-                <span class="description">BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL BLABLABLABLABLABLABLA BLABLABLABLABLABLABLABLABLABLA BLABLABLABLABLABLABLABL </span>
+                <span class="description">@Model.Description</span>
             </div>
         </div>
         <div id="content2" class="content2">

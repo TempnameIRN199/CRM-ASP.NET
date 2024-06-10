@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <Folder Include="EntityDataModels\" />
+    <Folder Include="Views\DetailsAboutDeal\" />
   </ItemGroup>
 
 </Project>

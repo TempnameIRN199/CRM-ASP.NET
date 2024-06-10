@@ -24,5 +24,20 @@ namespace CRM_system.Controllers
 				.Include(d => d.DealStatus).ToListAsync();
 			return View(deals);
 		}
+
+        public IActionResult Details(int id)
+        {
+            var deal = _context.Deals.Include(d => d.DealEvents)
+				.Include(d => d.Client)
+				.Include(d => d.Manager)
+				.FirstOrDefault(d => d.Id == id);
+            _context.Entry(deal.Client).Collection("ClientNotations").Load();
+            if (deal == null)
+            {
+                return NotFound();
+            }
+
+            return View(deal);
+        }
     }
 }

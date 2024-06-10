@@ -18,12 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\adsdadsdadas\comand\CRM-ASP.NET\CRM_system
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/adsdadsdadas/comand/CRM-ASP.NET/CRM_system/Views/Deals/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVhbHNcSW5kZXguY3NodG1s
+[C:/adsdadsdadas/comand/CRM-ASP.NET/CRM_system/Views/Deals/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVhbHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/adsdadsdadas/comand/CRM-ASP.NET/CRM_system/Views/DetailsAboutDeal/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0YWlsc0Fib3V0RGVhbFxJbmRleC5jc2h0bWw=
+[C:/adsdadsdadas/comand/CRM-ASP.NET/CRM_system/Views/Deals/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVhbHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/adsdadsdadas/comand/CRM-ASP.NET/CRM_system/Views/Home/Index.cshtml]

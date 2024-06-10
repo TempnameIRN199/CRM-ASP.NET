@@ -212,7 +212,7 @@
                                 <td>@deal.Client.Email</td>
                                 <td>@deal.Amount</td>
                                 <td>@deal.Description</td>
-                                <td><button class="buttonInTable">Link</button></td>
+                                <td><a asp-controller="Deals" asp-action="Details" asp-route-id="@deal.Id" class="buttonInTable">Link</a></td>
                                 <td><button class="buttonInTable1">✔</button></td>
                                 <td><button class="buttonInTable1">&#x2718;</button></td>
                             </tr>

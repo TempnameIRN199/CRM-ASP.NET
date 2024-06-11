@@ -127,7 +127,7 @@
         </div>
     </div>
     <div class="main">
-        <form asp-action="DIR" method="post" class="sidebar" id="sidebar">
+        <form asp-action="DIR" class="sidebar" id="sidebar">
             <div class="sidebar">
                 <button class="sidebar_button" type="submit" name="action" value="Managers">Managers</button>
                 <button class="sidebar_button" type="submit" name="action" value="Deals">Deals</button>
@@ -136,7 +136,7 @@
         <div id="content3" class="content3">
             <div class="user-info1">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
-                <span class="user-name">Vlad</span>
+                <span class="user-name">@Model.Client.Name</span>
             </div>
             <br>
             <div class="user-info1">
@@ -145,7 +145,7 @@
             </div>
             <br>
             <div class="user-info1">
-                <span class="user-name">Email</span>
+                <span class="user-name">Email</span> 
                 <span class="user-name">@Model.Client.Email</span>
             </div>
             <br>
@@ -166,7 +166,7 @@
             <br>
             <span class="user-name">Description</span>
             <br>
-            <div>
+            <div> 
                 <span class="description">@Model.Description</span>
             </div>
         </div>

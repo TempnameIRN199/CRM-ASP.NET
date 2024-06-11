@@ -30,6 +30,7 @@ namespace CRM_system.Controllers
             var deal = _context.Deals.Include(d => d.DealEvents)
 				.Include(d => d.Client)
 				.Include(d => d.Manager)
+				.Include(d => d.DealEvents)
 				.FirstOrDefault(d => d.Id == id);
             _context.Entry(deal.Client).Collection("ClientNotations").Load();
             if (deal == null)

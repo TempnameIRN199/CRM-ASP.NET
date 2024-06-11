@@ -172,35 +172,30 @@
         </div>
         <div id="content2" class="content2">
             <div id="clientRecord">
-                <div class="clientRecord">
-                    <div class="user-info">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
-                        <span class="user-name">Kenny</span>
+                @foreach (var not in Model.Client.ClientNotations)
+                {
+                    <div class="clientRecord">
+                        <div class="user-info">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
+                            <span class="user-name">@Model.Manager.Name</span>&nbsp;&nbsp;&nbsp;&nbsp;@not.Date.ToString("dd-MM-yyyy")
+                        </div>
+                        <span class="user-name">
+                            @not.Text
+                        </span>
                     </div>
-                    <span class="user-name">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut nulla mi. Curabitur lobortis erat ut tempor accumsan. Maecenas et nulla elit. In vel fringilla purus, ut interdum lacus. Praesent ut urna id dui lobortis pretium. Etiam eu metus ultrices, porta lacus vitae, cursus elit. Aliquam feugiat, enim nec vestibulum gravida, magna sapien dignissim elit, nec scelerisque eros libero vel risus. Nulla sit amet lacus sit amet orci condimentum pretium sed ut nunc. In hac habitasse platea dictumst. Nullam suscipit fringilla porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tortor purus, interdum quis accumsan sit amet, mollis sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                    </span>
-                </div>
-                <div class="clientRecord">
-                    <div class="user-info">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mnbYhPE32Wn7s6ArPXGesdArvPMGW8D60sMqE8CYLg&s" alt="User Icon">
-                        <span class="user-name">Anna</span>
-                    </div>
-                    <span class="user-name">afsd!</span>
-                </div>
+                }
             </div>
             <div id="dealRecord">
-                <div class="dealRecord">
-                    <span class="user-name">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut nulla mi. Curabitur lobortis erat ut tempor accumsan. Maecenas et nulla elit. In vel fringilla purus, ut interdum lacus. Praesent ut urna id dui lobortis pretium. Etiam eu metus ultrices, porta lacus vitae, cursus elit. Aliquam feugiat, enim nec vestibulum gravida, magna sapien dignissim elit, nec scelerisque eros libero vel risus. Nulla sit amet lacus sit amet orci condimentum pretium sed ut nunc. In hac habitasse platea dictumst. Nullam suscipit fringilla porta. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris tortor purus, interdum quis accumsan sit amet, mollis sed diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                    </span>
-                </div>
-                <div class="dealRecord">
-
-                    <span class="user-name">Duis egestas accumsan sem, sed semper lectus sollicitudin a. Nulla malesuada ipsum nec ex ornare, vel interdum eros suscipit. Duis ac nibh sed sem scelerisque eleifend eu quis quam. Nulla consectetur lacus in fermentum porta. Nam imperdiet, elit sit amet blandit fringilla, mi est commodo lectus, et finibus velit augue eget tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum vitae suscipit metus, ac dignissim leo. Mauris elit urna, ultricies egestas mattis sed, cursus non neque. Sed quis quam a sapien consectetur facilisis. Praesent sed dolor id neque imperdiet scelerisque. Sed consequat volutpat enim, eget volutpat nibh venenatis eget.</span>
-                </div>
+                @foreach (var ev in Model.DealEvents)
+                {
+                    <div class="dealRecord">
+                        @ev.Date.ToString("dd-MM-yyyy")
+                        <br>
+                        <span class="user-name">
+                            @ev.Description
+                        </span>
+                    </div>
+                }
             </div>
             <select class="select-style" id="record-type" onchange="toggleDateInput()">
                 <option>About client</option>
